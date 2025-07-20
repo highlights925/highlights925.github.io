@@ -63,9 +63,11 @@ education:
       GPA: 3.8/4.0
 
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Network Security and Cryptography
+      - Formal Methods in System Design
+      - Machine Learning and Its Applications
+      - Advanced Topics in Artificial Intelligence
+      - Secure Embedded Systems
     button: 
       text: 'Read Thesis'
       url: 'https://example.com'
@@ -77,9 +79,11 @@ education:
       GPA: 3.4/4.0
       
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Data Structures and Algorithms
+      - Database Systems
+      - Probability and Statistics
+      - Big Data Technologies
+      - Artificial Intelligence Fundamentals
     button: 
       text: 'Read Thesis'
       url: 'https://example.com'
