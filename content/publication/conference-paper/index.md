@@ -1,23 +1,25 @@
 ---
-title: 'An example conference paper'
+title: 'Root Cause Analysis for Industrial Process Anomalies through the Integration of Knowledge Graph and Large Language Model'
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - Robert Ford
+  - Yahui Li
+  - Chunjie Zhou
+  - Yu-Chu Tian
 
 # Author notes (optional)
 author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
+#  - 'Equal contribution'
+#  - 'Equal contribution'
 
-date: '2013-07-01T00:00:00Z'
+date: '2024-07-28T00:00:00Z'
 doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2017-01-01T00:00:00Z'
+publishDate: '2024-07-28T00:00:00Z'
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -25,13 +27,13 @@ publishDate: '2017-01-01T00:00:00Z'
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: In *Hugo Blox Builder Conference*
-publication_short: In *ICW*
+publication: In *2024 43rd Chinese Control Conference*
+publication_short: In *CCC*
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: Root cause analysis for industrial process anomalies is critical for manufacturing activities. Industrial process alarms can provide crucial information to enable root cause analysis. However, the complex system structure causes a large number of alarms to emerge at the same time. To address this issue, we proposed an approach that utilizes knowledge graphs and large language models to provide comprehensible root cause analysis. Firstly, we extract knowledge such as historical anomalies from catalytic cracking operation manuals to construct an industrial process safety knowledge graph. Then, named entities in each alarm are extracted as keywords to retrieve factual knowledge from the knowledge graph. Finally, factual knowledge will be provided to the large language model as prior knowledge to infer the root cause of anomalies. Experimental results show that the proposed approach can accurately identify the root cause, thereby ensuring the safety of industrial processes.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: We propose a method using knowledge graphs and large language models for root cause analysis of industrial process anomalies. By extracting key information from alarms and manuals, the system identifies causes of faults. Experiments show it improves accuracy and supports safer industrial operations.
 
 tags:
   - Large Language Models
