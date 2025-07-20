@@ -122,10 +122,10 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Badminton
         description: ''
-        percent: 60
-        icon: person-simple-walk
+        percent: 75
+        icon: shuttlecock
       - name: Cats
         description: ''
         percent: 100
