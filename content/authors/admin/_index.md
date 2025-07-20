@@ -41,9 +41,9 @@ profiles:
     url: https://orcid.org/my-orcid?orcid=0009-0006-4692-6265
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Natural Language Processing
+  - Time Series Forecasting
+  - Big Data Analysis
 
 education:
 #  - area: PhD Artificial Intelligence
