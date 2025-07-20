@@ -96,9 +96,10 @@ work:
     date_end: ''
     summary: |2-
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - Leading the engineering development and productization of AI technologies across various domains.  
+      - Designing and implementing AI algorithms and systems, including deep learning, computer vision, autonomous driving, path planning, intelligent decision-making, recommendation systems, foundation models, and generative AI.  
+      - Developing and maintaining toolchains, integrating AI products, and conducting functional and performance debugging.  
+      - Researching and analyzing the latest trends in AI, including large models, generative AI, and AI for coding, to drive technical innovation.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
