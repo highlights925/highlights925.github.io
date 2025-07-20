@@ -122,14 +122,6 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Badminton
-        description: ''
-        percent: 75
-        icon: badminton
-      - name: Gaming
-        description: ''
-        percent: 85
-        icon: gamepad
       - name: Cats
         description: ''
         percent: 100
