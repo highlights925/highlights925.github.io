@@ -150,6 +150,7 @@ languages:
 awards:
   - title: First-class Scholarship for Postgraduates of Huazhong University of Science and Technology
     url: https://www.coursera.org/learn/neural-networks-deep-learning
+    certificate_url: https://highlights925.github.io/uploads/hust-award-1.pdf
     date: '2023-02-23'
     awarder: Huazhong University of Science and Technology
     icon: coursera
@@ -157,6 +158,7 @@ awards:
       I was awarded the First-class Scholarship for Postgraduates at Huazhong University of Science and Technology for the 2022–2023 academic year. This honor recognizes my outstanding academic performance, research potential, and comprehensive development during my postgraduate studies in cyberspace security.
   - title: First-class Scholarship for Postgraduates of Huazhong University of Science and Technology
     url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+    certificate_url: https://highlights925.github.io/uploads/hust-award-2.pdf
     date: '2023-12-19'
     awarder: Huazhong University of Science and Technology
     icon: coursera
@@ -164,7 +166,7 @@ awards:
       I was awarded the First-class Scholarship for Postgraduates at Huazhong University of Science and Technology for the 2023–2024 academic year. This honor recognizes my outstanding academic performance, research potential, and comprehensive development during my postgraduate studies in cyberspace security.
   - title: Second-class Scholarship for Postgraduates of Huazhong University of Science and Technology
     url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
+    certificate_url: https://highlights925.github.io/uploads/hust-award-3.pdf
     date: '2024-12-24'
     awarder: Huazhong University of Science and Technology
     icon: coursera
