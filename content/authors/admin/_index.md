@@ -125,15 +125,15 @@ skills:
       - name: Badminton
         description: ''
         percent: 75
-        icon: shuttlecock
+        icon: lucide
+      - name: Gaming
+        description: ''
+        percent: 85
+        icon: gamepad
       - name: Cats
         description: ''
         percent: 100
         icon: cat
-      - name: Photography
-        description: ''
-        percent: 80
-        icon: camera
 
 languages:
   - name: Chinese
