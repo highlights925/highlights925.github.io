@@ -125,7 +125,7 @@ skills:
       - name: Badminton
         description: ''
         percent: 75
-        icon: lucide
+        icon: shuttlecock
       - name: Gaming
         description: ''
         percent: 85
