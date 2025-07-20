@@ -129,7 +129,7 @@ skills:
       - name: Gaming
         description: ''
         percent: 85
-        icon: gamepad
+        icon: gamepad-2
       - name: Cats
         description: ''
         percent: 100
