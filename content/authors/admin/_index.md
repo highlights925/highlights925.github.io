@@ -31,25 +31,40 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:highlights925@gmail.com'
+    url: 'mailto:your-email@example.com'
     label: E-mail Me
+  - icon: brands/x
+    url: https://twitter.com/GetResearchDev
+  - icon: brands/instagram
+    url: https://www.instagram.com/
   - icon: brands/github
-    url: https://github.com/highlights925
+    url: https://github.com/gcushen
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=F_aQcNMAAAAJ&hl=zh-CN
+    url: https://scholar.google.com/
   - icon: academicons/orcid
-    url: https://orcid.org/my-orcid?orcid=0009-0006-4692-6265
+    url: https://orcid.org/
 
 interests:
-  - Natural Language Processing
-  - Time Series Forecasting
-  - Deep Reinforcement Learning
+  - Artificial Intelligence
+  - Computational Linguistics
+  - Information Retrieval
 
 education:
-  - area: MEng Cyberspace Security
-    institution: Huazhong University of Science and Technology
-    date_start: 2022-09-01
-    date_end: 2025-06-20
+  - area: PhD Artificial Intelligence
+    institution: Stanford University
+    date_start: 2016-01-01
+    date_end: 2020-12-31
+    summary: |
+      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+    button:
+      text: 'Read Thesis'
+      url: 'https://example.com'
+  - area: MEng Artificial Intelligence
+    institution: Massachusetts Institute of Technology
+    date_start: 2016-01-01
+    date_end: 2020-12-31
     summary: |
       GPA: 3.8/4.0
 
@@ -57,10 +72,10 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Data Science
-    institution: North University of China
-    date_start: 2018-09-01
-    date_end: 2022-6-28
+  - area: BSc Artificial Intelligence
+    institution: Massachusetts Institute of Technology
+    date_start: 2016-01-01
+    date_end: 2020-12-31
     summary: |
       GPA: 3.4/4.0
       
@@ -69,15 +84,26 @@ education:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 work:
-  - position: AI Engineer
-    company_name: Huawei
+  - position: Director of Cloud Infrastructure
+    company_name: GenCoin
     company_url: ''
     company_logo: ''
-    date_start: 2025-08-04
+    date_start: 2021-01-01
     date_end: ''
     summary: |2-
       Responsibilities include:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - position: Backend Software Engineer
+    company_name: X
+    company_url: ''
+    company_logo: ''
+    date_start: 2016-01-01
+    date_end: 2020-12-31
+    summary: |
+      Responsibilities include:
+      - Migrated infrastructure to a new data center
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
