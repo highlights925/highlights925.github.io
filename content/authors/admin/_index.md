@@ -33,14 +33,8 @@ profiles:
   - icon: at-symbol
     url: 'mailto:highlights925@gmail.com'
     label: E-mail Me
-#  - icon: brands/x
-#    url: https://twitter.com/GetResearchDev
-#  - icon: brands/instagram
-#    url: https://www.instagram.com/
   - icon: brands/github
     url: https://github.com/highlights925
-#  - icon: brands/linkedin
-#    url: https://www.linkedin.com/
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=F_aQcNMAAAAJ&hl=zh-CN
   - icon: academicons/orcid
@@ -52,15 +46,6 @@ interests:
   - Deep Reinforcement Learning
 
 education:
-#  - area: PhD Artificial Intelligence
-#    institution: Stanford University
-#    date_start: 2016-01-01
-#    date_end: 2020-12-31
-#    summary: |
-#      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
-#    button:
-#      text: 'Read Thesis'
-#      url: 'https://example.com'
   - area: MEng Cyberspace Security
     institution: Huazhong University of Science and Technology
     date_start: 2022-09-01
@@ -95,17 +80,6 @@ work:
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
       - lorem ipsum dolor sit amet, consectetur adipiscing elit
-#  - position: Backend Software Engineer
-#    company_name: X
-#    company_url: ''
-#    company_logo: ''
-#    date_start: 2016-01-01
-#    date_end: 2020-12-31
-#    summary: |
-#      Responsibilities include:
-#      - Migrated infrastructure to a new data center
-#      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-#      - lorem ipsum dolor sit amet, consectetur adipiscing elit
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
