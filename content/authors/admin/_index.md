@@ -131,11 +131,11 @@ skills:
         icon: camera
 
 languages:
-  - name: English
-    percent: 100
   - name: Chinese
+    percent: 100
+  - name: English
     percent: 75
-  - name: Portuguese
+  - name: Japanese
     percent: 25
 
 # Awards.
@@ -172,4 +172,4 @@ awards:
 
 ## About Me
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Qi Sun is an AI engineer at Huawei Technologies Co., Ltd. Wuhan Research Institute. His research interests include natural language processing, time series forecasting and big data analysis.
