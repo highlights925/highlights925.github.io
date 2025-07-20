@@ -63,7 +63,7 @@ education:
       Thesis on _Safety Knowledge Graph Construction and Intelligent Safety Applications in Fluid Catalytic Cracking Reaction-Regeneration Systems_.
     button: 
       text: 'Read Thesis'
-      url: 'https://example.com'
+      url: 'https://highlights925.github.io/uploads/MEng-thesis.pdf'
   - area: BSc Data Science
     institution: North University of China
     date_start: 2018-09-01
