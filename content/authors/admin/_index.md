@@ -69,17 +69,10 @@ education:
     date_start: 2018-09-01
     date_end: 2022-06-28
     summary: |
-      GPA: 3.4/4.0
-      
-      Courses included:
-      - Data Structures and Algorithms
-      - Database Systems
-      - Probability and Statistics
-      - Big Data Technologies
-      - Artificial Intelligence Fundamentals
+      Thesis on _Research and Implementation of Remaining Life Prediction of Lithium-ion Battery Based on Deep Learning_.
     button: 
       text: 'Read Thesis'
-      url: 'https://example.com'
+      url: 'https://highlights925.github.io/uploads/BSc-thesis.pdf'
 work:
   - position: AI Engineer
     company_name: Huawei
