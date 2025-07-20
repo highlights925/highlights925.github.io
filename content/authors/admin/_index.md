@@ -125,7 +125,7 @@ skills:
       - name: Badminton
         description: ''
         percent: 75
-        icon: shuttlecock
+        icon: badminton
       - name: Gaming
         description: ''
         percent: 85
