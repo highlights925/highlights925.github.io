@@ -60,14 +60,7 @@ education:
     date_start: 2022-09-01
     date_end: 2025-06-20
     summary: |
-      GPA: 3.8/4.0
-
-      Courses included:
-      - Network Security and Cryptography
-      - Formal Methods in System Design
-      - Machine Learning and Its Applications
-      - Advanced Topics in Artificial Intelligence
-      - Secure Embedded Systems
+      Thesis on _Safety Knowledge Graph Construction and Intelligent Safety Applications in Fluid Catalytic Cracking Reaction-Regeneration Systems_.
     button: 
       text: 'Read Thesis'
       url: 'https://example.com'
