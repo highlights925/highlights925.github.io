@@ -110,11 +110,11 @@ skills:
         description: ''
         percent: 80
         icon: code-bracket
-      - name: Data Science
+      - name: Deep Learning
         description: ''
         percent: 100
         icon: chart-bar
-      - name: SQL
+      - name: Data Analysis
         description: ''
         percent: 40
         icon: circle-stack
