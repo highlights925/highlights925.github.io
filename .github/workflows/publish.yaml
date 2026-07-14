@@ -4,36 +4,37 @@ env:
   WC_HUGO_VERSION: '0.136.5'
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
     branches: ["main"]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
+  # GitHub also runs a branch/Jekyll "pages build and deployment" that overwrites
+  # the Hugo deploy. Re-deploy Hugo after that workflow finishes so the live site
+  # keeps the Hugo Blox theme.
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
 
-# Provide permission to clone the repo and deploy it to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# IMPORTANT: In GitHub → Settings → Pages → Source, choose "GitHub Actions".
-# If Source is "Deploy from a branch", Jekyll will overwrite this Hugo deploy
-# and the live site will show README/index.md instead of the Hugo theme.
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: "hugo-pages-deploy"
+  cancel-in-progress: false
 
 jobs:
-  # Build website
   build:
-    if: github.repository_owner != 'HugoBlox'
+    if: |
+      github.repository_owner != 'HugoBlox' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v4
       with:
-          # Fetch history for Hugo's .GitInfo and .Lastmod
         fetch-depth: 0
+        ref: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.head_sha || github.sha }}
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
@@ -56,14 +57,17 @@ jobs:
         hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
     - name: Generate Pagefind search index
       run: npx pagefind --site "public"
+    - name: Ensure .nojekyll
+      run: touch public/.nojekyll
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./public
 
-  # Deploy website to GitHub Pages hosting
   deploy:
-    if: github.repository_owner != 'HugoBlox'
+    if: |
+      github.repository_owner != 'HugoBlox' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

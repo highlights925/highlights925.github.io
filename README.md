@@ -1,15 +1,23 @@
-# Qi Sun's Homepage (source)
+# Qi Sun's Homepage (Hugo source)
 
-This repository is the **Hugo** source for <https://highlights925.github.io/>.
+Source for the Hugo Blox Academic CV site: https://highlights925.github.io/
 
-> If the live site looks like a plain README or “Local development” page, GitHub Pages is serving the branch with Jekyll instead of the Hugo Actions build. Fix: **Settings → Pages → Source → GitHub Actions**, then re-run the workflow **Deploy website to GitHub Pages**.
-
-## Local development
+## Local preview
 
 ```bash
 brew install go hugo
 hugo server -D
 ```
+
+## Deploy
+
+Push to `main`. GitHub Actions builds with Hugo and deploys to GitHub Pages.
+
+**If the live site loses the Hugo theme** (plain Markdown / Jekyll look):
+
+1. Open **Settings → Pages → Build and deployment → Source**
+2. Choose **GitHub Actions** (not “Deploy from a branch”)
+3. Re-run the workflow **Deploy website to GitHub Pages**
 
 ## Content
 
@@ -19,8 +27,3 @@ hugo server -D
 | `content/publication/` | Papers |
 | `content/_index.md` | Homepage sections |
 | `content/experience.md` | Experience page |
-| `index.md` | Fallback page if Pages is on branch/Jekyll mode |
-
-## Deploy
-
-Push to `main`. Workflow `.github/workflows/publish.yaml` builds with Hugo and deploys via GitHub Pages.
