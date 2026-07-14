@@ -16,9 +16,12 @@ permissions:
   pages: write
   id-token: write
 
+# IMPORTANT: In GitHub → Settings → Pages → Source, choose "GitHub Actions".
+# If Source is "Deploy from a branch", Jekyll will overwrite this Hugo deploy
+# and the live site will show README/index.md instead of the Hugo theme.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   # Build website

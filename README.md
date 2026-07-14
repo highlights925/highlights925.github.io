@@ -1,28 +1,26 @@
-# Qi Sun's Homepage
+# Qi Sun's Homepage (source)
 
-Personal academic website of **Qi Sun (孙琪)**: https://highlights925.github.io/
+This repository is the **Hugo** source for <https://highlights925.github.io/>.
 
-Built with [Hugo](https://gohugo.io/) and [Hugo Blox Academic CV](https://github.com/HugoBlox/theme-academic-cv). Deployed to GitHub Pages via Actions.
+> If the live site looks like a plain README or “Local development” page, GitHub Pages is serving the branch with Jekyll instead of the Hugo Actions build. Fix: **Settings → Pages → Source → GitHub Actions**, then re-run the workflow **Deploy website to GitHub Pages**.
 
 ## Local development
 
 ```bash
-brew install go hugo   # once
+brew install go hugo
 hugo server -D
 ```
 
-Open the URL printed in the terminal (usually `http://localhost:1313`).
-
-## Content layout
+## Content
 
 | Path | Purpose |
 |------|---------|
 | `content/authors/admin/` | Bio, education, work, skills, awards |
-| `content/publication/` | Papers (Markdown + `cite.bib`) |
+| `content/publication/` | Papers |
 | `content/_index.md` | Homepage sections |
 | `content/experience.md` | Experience page |
-| `config/_default/` | Site, menus, params |
+| `index.md` | Fallback page if Pages is on branch/Jekyll mode |
 
 ## Deploy
 
-Push to `main`. GitHub Actions builds with Hugo and publishes to GitHub Pages.
+Push to `main`. Workflow `.github/workflows/publish.yaml` builds with Hugo and deploys via GitHub Pages.
