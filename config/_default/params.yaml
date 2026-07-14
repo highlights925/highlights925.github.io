@@ -13,8 +13,8 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'Qi Sun (孙琪) — AI Engineer at Huawei. Research on industrial process safety, time series anomaly detection, knowledge graphs, and NLP.'
+    org_name: 'Huawei'
+    description: 'Qi Sun (孙琪) — AI Engineer at Huawei Wuhan Research Institute. Research on industrial process safety, time series anomaly detection, knowledge graphs, and NLP.'
     twitter: ''
   analytics:
     google_analytics: ''

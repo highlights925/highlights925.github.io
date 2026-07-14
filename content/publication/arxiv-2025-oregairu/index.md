@@ -15,7 +15,7 @@ summary: A first-author benchmark dataset for anime character appearance frequen
 tags:
   - Computer Vision
   - Benchmark Dataset
-featured: true
+featured: false
 url_pdf: "https://arxiv.org/pdf/2511.05263"
 url_code: ""
 url_dataset: ""

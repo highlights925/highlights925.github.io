@@ -11,7 +11,7 @@ last_name: Sun
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🔬
 
 # Is this the primary user of the site?
 superuser: true
@@ -20,7 +20,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: AI Engineer
+role: AI Engineer, Wuhan Research Institute
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -28,7 +28,6 @@ organizations:
     url: https://www.huawei.com/
 
 # Social network links
-# Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
     url: 'mailto:highlights925@gmail.com'
@@ -38,7 +37,7 @@ profiles:
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=F_aQcNMAAAAJ
   - icon: academicons/orcid
-    url: https://orcid.org/my-orcid?orcid=0009-0006-4692-6265
+    url: https://orcid.org/0009-0006-4692-6265
 
 interests:
   - Industrial Process Safety
@@ -53,7 +52,7 @@ education:
     date_end: 2025-06-20
     summary: |
       Thesis on _Safety Knowledge Graph Construction and Intelligent Safety Applications in Fluid Catalytic Cracking Reaction-Regeneration Systems_.
-    button: 
+    button:
       text: 'Read Thesis'
       url: 'https://highlights925.github.io/uploads/MEng-thesis.pdf'
   - area: BSc Data Science
@@ -62,56 +61,54 @@ education:
     date_end: 2022-06-28
     summary: |
       Thesis on _Research and Implementation of Remaining Life Prediction of Lithium-ion Battery Based on Deep Learning_.
-    button: 
+    button:
       text: 'Read Thesis'
       url: 'https://highlights925.github.io/uploads/BSc-thesis.pdf'
 work:
   - position: AI Engineer
-    company_name: Huawei
-    company_url: ''
+    company_name: Huawei Wuhan Research Institute
+    company_url: 'https://www.huawei.com/'
     company_logo: ''
     date_start: 2025-08-04
     date_end: ''
     summary: |2-
-      Responsibilities include:
-      - Leading the engineering development and productization of AI technologies across various domains.  
-      - Designing and implementing AI algorithms and systems, including deep learning, computer vision, autonomous driving, path planning, intelligent decision-making, recommendation systems, foundation models, and generative AI.  
-      - Developing and maintaining toolchains, integrating AI products, and conducting functional and performance debugging.  
-      - Researching and analyzing the latest trends in AI, including large models, generative AI, and AI for coding, to drive technical innovation.
+      Working on AI engineering and productization, with a focus on:
+      - Applying large models and generative AI to industrial and engineering scenarios.
+      - Building and evaluating deep learning systems for perception, decision-making, and intelligent analysis.
+      - Developing toolchains, integrating AI capabilities into products, and improving reliability and performance.
+  - position: Graduate Researcher
+    company_name: Huazhong University of Science and Technology
+    company_url: 'https://www.hust.edu.cn/'
+    company_logo: ''
+    date_start: 2022-09-01
+    date_end: 2025-06-20
+    summary: |2-
+      Conducted research on industrial process safety and intelligent analysis under Prof. Chunjie Zhou's group:
+      - Safety knowledge graph construction and LLM-based root-cause analysis for catalytic cracking processes.
+      - Multivariate time series anomaly detection with spatial-temporal dependency modeling.
+      - Manufacturing named entity recognition and ADAS / CPS safety verification.
+      - Published in *Measurement*, *EAAI*, *RESS*, *CCC*, *CAC*, *IEEE SMC*, and *ICIC*.
 
 # Skills
-# Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Research & Engineering
     items:
-      - name: Python
-        description: ''
-        percent: 80
-        icon: code-bracket
-      - name: Deep Learning
-        description: ''
-        percent: 100
+      - name: Time Series & Anomaly Detection
+        description: Multivariate process monitoring and DS2AE-style models
+        percent: 90
         icon: chart-bar
-      - name: Data Analysis
-        description: ''
-        percent: 40
+      - name: Knowledge Graphs & NLP
+        description: Industrial KG, NER, and LLM-augmented RCA
+        percent: 85
         icon: circle-stack
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Badminton
-        description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
-        description: ''
-        percent: 100
-        icon: cat
-      - name: Sing
-        description: ''
-        percent: 80
-        icon: camera
+      - name: Python & Deep Learning
+        description: PyTorch, data pipelines, and model productization
+        percent: 90
+        icon: code-bracket
+      - name: Safety & Formal Methods
+        description: HAZOP, hybrid automata, CPS safety analysis
+        percent: 75
+        icon: lock-closed
 
 languages:
   - name: Chinese
@@ -121,37 +118,30 @@ languages:
   - name: Japanese
     percent: 25
 
-# Awards.
-#   Add/remove as many awards below as you like.
-#   Only `title`, `awarder`, and `date` are required.
-#   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: First-class Scholarship for Postgraduates of Huazhong University of Science and Technology
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
+  - title: First-class Scholarship for Postgraduates
     certificate_url: https://highlights925.github.io/uploads/hust-award-1.pdf
     date: '2023-02-23'
     awarder: Huazhong University of Science and Technology
-    icon: coursera
+    icon: academicons/cv
     summary: |
-      I was awarded the First-class Scholarship for Postgraduates at Huazhong University of Science and Technology for the 2022–2023 academic year. This honor recognizes my outstanding academic performance, research potential, and comprehensive development during my postgraduate studies in cyberspace security.
-  - title: First-class Scholarship for Postgraduates of Huazhong University of Science and Technology
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
+      First-class Scholarship for Postgraduates for the 2022–2023 academic year, recognizing academic performance and research potential in cyberspace security.
+  - title: First-class Scholarship for Postgraduates
     certificate_url: https://highlights925.github.io/uploads/hust-award-2.pdf
     date: '2023-12-19'
     awarder: Huazhong University of Science and Technology
-    icon: coursera
+    icon: academicons/cv
     summary: |
-      I was awarded the First-class Scholarship for Postgraduates at Huazhong University of Science and Technology for the 2023–2024 academic year. This honor recognizes my outstanding academic performance, research potential, and comprehensive development during my postgraduate studies in cyberspace security.
-  - title: Second-class Scholarship for Postgraduates of Huazhong University of Science and Technology
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
+      First-class Scholarship for Postgraduates for the 2023–2024 academic year.
+  - title: Second-class Scholarship for Postgraduates
     certificate_url: https://highlights925.github.io/uploads/hust-award-3.pdf
     date: '2024-12-24'
     awarder: Huazhong University of Science and Technology
-    icon: coursera
+    icon: academicons/cv
     summary: |
-      I was awarded the Second-class Scholarship for Postgraduates at Huazhong University of Science and Technology for the 2023–2024 academic year. This honor recognizes my outstanding academic performance, research potential, and comprehensive development during my postgraduate studies in cyberspace security.
+      Second-class Scholarship for Postgraduates for the 2024–2025 academic year.
 ---
 
 ## About Me
 
-Qi Sun is an AI engineer at Huawei Technologies Co., Ltd. Wuhan Research Institute. His research focuses on industrial process safety, multivariate time series anomaly detection, knowledge graphs, and NLP for manufacturing. He has published in venues such as *Measurement*, *EAAI*, *RESS*, *CCC*, *CAC*, *IEEE SMC*, and *ICIC*. See his [Google Scholar](https://scholar.google.com/citations?user=F_aQcNMAAAAJ) for the full publication list.
+Qi Sun (孙琪) is an AI engineer at Huawei Wuhan Research Institute. His research focuses on industrial process safety, multivariate time series anomaly detection, knowledge graphs, and NLP for manufacturing. He received his MEng in Cyberspace Security from Huazhong University of Science and Technology. Full publication list on [Google Scholar](https://scholar.google.com/citations?user=F_aQcNMAAAAJ).

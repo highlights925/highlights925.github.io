@@ -15,7 +15,7 @@ summary: A hybrid EMD and multi-task autoencoder method for lithium-ion battery 
 tags:
   - Battery Health
   - Time Series
-featured: true
+featured: false
 url_pdf: "https://doi.org/10.1016/j.measurement.2024.115146"
 url_code: ""
 url_dataset: ""
