@@ -41,9 +41,10 @@ profiles:
     url: https://orcid.org/my-orcid?orcid=0009-0006-4692-6265
 
 interests:
-  - Natural Language Processing
-  - Time Series Forecasting
-  - Big Data Analysis
+  - Industrial Process Safety
+  - Time Series Anomaly Detection
+  - Knowledge Graphs & NLP
+  - AI for Cyber-Physical Systems
 
 education:
   - area: MEng Cyberspace Security
@@ -153,4 +154,4 @@ awards:
 
 ## About Me
 
-Qi Sun is an AI engineer at Huawei Technologies Co., Ltd. Wuhan Research Institute. His research interests include natural language processing, time series forecasting and big data analysis.
+Qi Sun is an AI engineer at Huawei Technologies Co., Ltd. Wuhan Research Institute. His research focuses on industrial process safety, multivariate time series anomaly detection, knowledge graphs, and NLP for manufacturing. He has published in venues such as *Measurement*, *EAAI*, *RESS*, *CCC*, *CAC*, *IEEE SMC*, and *ICIC*. See his [Google Scholar](https://scholar.google.com/citations?user=F_aQcNMAAAAJ) for the full publication list.

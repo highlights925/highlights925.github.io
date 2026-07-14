@@ -35,7 +35,7 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        I'm an AI engineer at Huawei Technologies Co., Ltd. Wuhan Research Institute. I blog about machine learning, deep learning, and data analysis. I apply deep learning in a variety of directions to explore its potential value. Please reach out to collaborate 😃
+        I'm an AI engineer at Huawei Technologies Co., Ltd. Wuhan Research Institute. My research focuses on **industrial process safety**, **time series anomaly detection**, **knowledge graphs**, and **NLP for manufacturing**. I work on root-cause analysis with LLMs, multivariate time series modeling, and safety verification for cyber-physical systems. Feel free to reach out to collaborate.
     design:
       columns: '1'
   - block: collection
