@@ -1,0 +1,10 @@
+# Hugo
+/public/
+/resources/
+.hugo_build.lock
+hugo_stats.json
+
+# OS / IDE
+.DS_Store
+.idea/
+*.swp

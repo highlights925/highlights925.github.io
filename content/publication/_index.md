@@ -1,12 +1,9 @@
 ---
 title: Publications
 cms_exclude: true
-
-# View.
 view: citation
-
-# Optional header image (relative to `static/media/` folder).
-banner:
-  caption: ''
-  image: ''
 ---
+
+Peer-reviewed papers and preprints. Featured works are also highlighted on the [homepage](/).
+
+For the latest citation counts, see [Google Scholar](https://scholar.google.com/citations?user=F_aQcNMAAAAJ).

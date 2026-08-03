@@ -54,7 +54,7 @@ education:
       Thesis on _Safety Knowledge Graph Construction and Intelligent Safety Applications in Fluid Catalytic Cracking Reaction-Regeneration Systems_.
     button:
       text: 'Read Thesis'
-      url: 'https://highlights925.github.io/uploads/MEng-thesis.pdf'
+      url: '/uploads/MEng-thesis.pdf'
   - area: BSc Data Science
     institution: North University of China
     date_start: 2018-09-01
@@ -63,7 +63,7 @@ education:
       Thesis on _Research and Implementation of Remaining Life Prediction of Lithium-ion Battery Based on Deep Learning_.
     button:
       text: 'Read Thesis'
-      url: 'https://highlights925.github.io/uploads/BSc-thesis.pdf'
+      url: '/uploads/BSc-thesis.pdf'
 work:
   - position: AI Engineer
     company_name: Huawei Wuhan Research Institute
@@ -120,21 +120,21 @@ languages:
 
 awards:
   - title: First-class Scholarship for Postgraduates
-    certificate_url: https://highlights925.github.io/uploads/hust-award-1.pdf
+    certificate_url: /uploads/hust-award-1.pdf
     date: '2023-02-23'
     awarder: Huazhong University of Science and Technology
     icon: academicons/cv
     summary: |
       First-class Scholarship for Postgraduates for the 2022–2023 academic year, recognizing academic performance and research potential in cyberspace security.
   - title: First-class Scholarship for Postgraduates
-    certificate_url: https://highlights925.github.io/uploads/hust-award-2.pdf
+    certificate_url: /uploads/hust-award-2.pdf
     date: '2023-12-19'
     awarder: Huazhong University of Science and Technology
     icon: academicons/cv
     summary: |
       First-class Scholarship for Postgraduates for the 2023–2024 academic year.
   - title: Second-class Scholarship for Postgraduates
-    certificate_url: https://highlights925.github.io/uploads/hust-award-3.pdf
+    certificate_url: /uploads/hust-award-3.pdf
     date: '2024-12-24'
     awarder: Huazhong University of Science and Technology
     icon: academicons/cv
@@ -144,4 +144,9 @@ awards:
 
 ## About Me
 
-Qi Sun (孙琪) is an AI engineer at Huawei Wuhan Research Institute. His research focuses on industrial process safety, multivariate time series anomaly detection, knowledge graphs, and NLP for manufacturing. He received his MEng in Cyberspace Security from Huazhong University of Science and Technology. Full publication list on [Google Scholar](https://scholar.google.com/citations?user=F_aQcNMAAAAJ).
+Qi Sun (孙琪) is an AI engineer at **Huawei Wuhan Research Institute**. He works on industrial process safety, multivariate time series anomaly detection, knowledge graphs, and NLP for manufacturing.
+
+He received his MEng in Cyberspace Security from **Huazhong University of Science and Technology** (2025), with a thesis on safety knowledge graph construction for fluid catalytic cracking systems, and a BSc in Data Science from **North University of China** (2022).
+
+Selected venues: *Measurement*, *EAAI*, *RESS*, *CCC*, *CAC*, *IEEE SMC*, *ICIC*, *IEEE GRSL*.  
+[Google Scholar](https://scholar.google.com/citations?user=F_aQcNMAAAAJ) · [ORCID](https://orcid.org/0009-0006-4692-6265) · [GitHub](https://github.com/highlights925)
