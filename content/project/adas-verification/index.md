@@ -27,3 +27,7 @@ ADAS functions mix discrete mode switches with continuous dynamics. Road tests a
 ## Outcomes
 
 A verification and control stack that emphasizes formal guarantees, interpretability, and practical inference cost.
+
+{{< paper-chat >}}
+
+{{< comments >}}

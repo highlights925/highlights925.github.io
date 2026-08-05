@@ -55,3 +55,7 @@ Demonstrated on abnormal event analysis and disposal for a real fluid catalytic 
 - DOI: [10.1109/CAC63892.2024.10865599](https://doi.org/10.1109/CAC63892.2024.10865599)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

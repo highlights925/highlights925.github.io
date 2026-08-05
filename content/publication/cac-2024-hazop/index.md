@@ -56,3 +56,7 @@ Risk rankings show high reliability for FCC unit protection planning.
 - DOI: [10.1109/CAC63892.2024.10864571](https://doi.org/10.1109/CAC63892.2024.10864571)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

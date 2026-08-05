@@ -56,3 +56,7 @@ Experiments show the approach can accurately identify root causes in industrial 
 - DOI: [10.23919/CCC63176.2024.10662704](https://doi.org/10.23919/CCC63176.2024.10662704)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

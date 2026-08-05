@@ -1,0 +1,17 @@
+<div class="qs-ask-hero">
+  <p class="qs-ask-hero__eyebrow">Personal Q&amp;A</p>
+  <p class="qs-ask-hero__lead">
+    {{- with .Get "lead" -}}
+      {{- . -}}
+    {{- else -}}
+      Answers draw from a curated profile of education, work, research themes, and publications.
+      The assistant runs through a local DeepSeek-backed service while it is online.
+    {{- end -}}
+  </p>
+  <ul class="qs-ask-hints" id="qs-ask-hints">
+    <li><button type="button" data-qs-prompt="What is Qi Sun's current role?">Current role</button></li>
+    <li><button type="button" data-qs-prompt="What are Qi Sun's main research themes?">Research themes</button></li>
+    <li><button type="button" data-qs-prompt="Which papers are about time series anomaly detection?">Time series papers</button></li>
+    <li><button type="button" data-qs-prompt="How can I contact Qi Sun?">Contact</button></li>
+  </ul>
+</div>

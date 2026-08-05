@@ -56,3 +56,7 @@ Published in *Engineering Applications of Artificial Intelligence* (2025).
 - DOI: [10.1016/j.engappai.2025.112693](https://doi.org/10.1016/j.engappai.2025.112693)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

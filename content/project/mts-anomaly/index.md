@@ -27,3 +27,7 @@ Catalytic cracking and other process units exhibit strong variable couplings. Lo
 ## Outcomes
 
 A family of methods spanning detection, classification of failure modes, and causal diagnosis on TEP / CCP-style industrial datasets.
+
+{{< paper-chat >}}
+
+{{< comments >}}

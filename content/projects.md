@@ -12,6 +12,8 @@ sections:
       title: Research Themes
       text: |-
         My work sits at the intersection of **industrial AI** and **safety-critical systems**: turning noisy process signals and domain documents into actionable, explainable decisions.
+
+        Across catalytic cracking, manufacturing NLP, and ADAS verification, the goal is the same — methods that operators and engineers can **trust under uncertainty**.
     design:
       columns: '1'
   - block: collection

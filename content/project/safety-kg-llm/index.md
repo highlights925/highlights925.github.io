@@ -32,3 +32,7 @@ Industrial plants often emit large volumes of alarms during abnormal conditions.
 - First-author paper at **CCC 2024** on KG + LLM root-cause analysis.
 - Related manufacturing NER work in **EAAI 2025**.
 - Closely aligned with the MEng thesis on FCC reaction–regeneration safety knowledge graphs.
+
+{{< paper-chat >}}
+
+{{< comments >}}

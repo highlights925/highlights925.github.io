@@ -56,3 +56,7 @@ Validated on industrial process settings; published in ICIC 2024 (LNCS).
 - DOI: [10.1007/978-981-97-5618-6_18](https://doi.org/10.1007/978-981-97-5618-6_18)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

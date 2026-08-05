@@ -54,3 +54,7 @@ Outperforms seven baselines on three datasets (avg. RMSE 0.0103 / 0.0111 / 0.000
 - DOI: [10.1016/j.measurement.2024.115146](https://doi.org/10.1016/j.measurement.2024.115146)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

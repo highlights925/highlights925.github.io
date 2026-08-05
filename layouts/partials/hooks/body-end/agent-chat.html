@@ -1,29 +1,58 @@
-{{/* Inject homepage Q&A agent when enabled in params.agent */}}
-{{- $agent := site.Params.agent -}}
-{{- if $agent.enable -}}
+{{/* Generic feature loader — reads params.features and injects per-feature config + JS. */}}
+{{- $features := site.Params.features | default site.Params.agent -}}
+{{- $chat := $features.chat | default dict -}}
 {{- $cfg := dict
-  "enable" true
-  "apiBase" ($agent.api_base | default "http://127.0.0.1:8000")
-  "apiKey" ($agent.api_key | default "")
-  "title" ($agent.title | default "Ask about Qi Sun")
-  "placeholder" ($agent.placeholder | default "Ask about research, education, papers…")
-  "welcome" ($agent.welcome | default "Hi — I can answer questions about Qi Sun's background, research, and publications. Start the local agent service to chat.")
-  "floating" (cond (isset $agent "floating") $agent.floating true)
-  "floatingOnAsk" ($agent.floating_on_ask | default false)
+  "apiBase" ($features.api_base | default "http://127.0.0.1:8000")
+  "apiKey" ($features.api_key | default "")
+  "chat" (dict
+    "enable" ($chat.enable | default true)
+    "title" ($chat.title | default "Ask about Qi Sun")
+    "placeholder" ($chat.placeholder | default "Ask about research, education, papers…")
+    "welcome" ($chat.welcome | default "Hi — I can answer questions about Qi Sun's background, research, and publications. Start the local agent service to chat.")
+    "floating" ($chat.floating | default true)
+    "floatingOnAsk" ($chat.floating_on_ask | default false)
+  )
+  "comments" (dict "enable" (($features.comments | default dict).enable | default true))
+  "match" (dict "enable" (($features.match | default dict).enable | default true))
 -}}
-{{/* base64 in a data attribute survives HTML minify; JS string literals do not. */}}
-<div id="qs-agent-config" hidden data-cfg="{{ $cfg | jsonify | base64Encode }}"></div>
+<div id="qs-features-config" hidden data-cfg="{{ $cfg | jsonify | base64Encode }}"></div>
 <script>
 (function () {
-  var el = document.getElementById("qs-agent-config");
+  var el = document.getElementById("qs-features-config");
   if (!el) return;
   try {
-    window.QS_AGENT = JSON.parse(atob(el.getAttribute("data-cfg")));
+    var b64 = el.getAttribute("data-cfg");
+    var utf8 = decodeURIComponent(escape(atob(b64)));
+    window.QS_FEATURES = JSON.parse(utf8);
+    var c = window.QS_FEATURES.chat || {};
+    window.QS_AGENT = {
+      enable: c.enable !== false,
+      apiBase: window.QS_FEATURES.apiBase,
+      apiKey: window.QS_FEATURES.apiKey,
+      title: c.title,
+      placeholder: c.placeholder,
+      welcome: c.welcome,
+      floating: c.floating,
+      floatingOnAsk: c.floatingOnAsk
+    };
   } catch (err) {
-    console.error("QS_AGENT config failed", err);
+    console.error("QS_FEATURES config failed", err);
     window.QS_AGENT = { enable: true, apiBase: "http://127.0.0.1:8000" };
   }
 })();
 </script>
-<script src="{{ "js/agent-chat.js" | relURL }}" defer></script>
+{{/* Load JS for enabled features only (md.js first — shared renderer) */}}
+{{- $loadChat := ($chat.enable | default true) -}}
+{{- $loadComments := (($features.comments | default dict).enable | default true) -}}
+{{- $loadMatch := (($features.match | default dict).enable | default true) -}}
+{{- $files := slice "js/md.js" -}}
+{{- if $loadChat -}}{{- $files = $files | append "js/agent-chat.js" | append "js/paper-chat.js" -}}{{- end -}}
+{{- if $loadMatch -}}{{- $files = $files | append "js/research-match.js" -}}{{- end -}}
+{{- if $loadComments -}}{{- $files = $files | append "js/comments.js" -}}{{- end -}}
+{{- range $f := $files -}}
+{{- with resources.Get $f -}}
+<script src="{{ (. | resources.Fingerprint "sha256").RelPermalink }}" defer></script>
+{{- else -}}
+<script src="{{ $f | relURL }}" defer></script>
+{{- end -}}
 {{- end -}}

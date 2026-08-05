@@ -55,3 +55,7 @@ Provides a stylized-media benchmark and a pipeline for computational narrative a
 - Preprint: [https://arxiv.org/abs/2511.05263](https://arxiv.org/abs/2511.05263)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

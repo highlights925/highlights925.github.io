@@ -1,0 +1,94 @@
+{{/* Feature cards grid — each card expands an interactive feature inline. */}}
+<div class="qs-explore not-prose">
+  <p class="qs-explore__lead">
+    A collection of interactive demos powered by a local AI agent. Pick a card to start.
+  </p>
+
+  <div class="qs-feature-grid" id="qs-feature-grid">
+    <button class="qs-feature-card is-active" type="button" data-qs-target="qs-panel-chat">
+      <span class="qs-feature-card__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </span>
+      <span class="qs-feature-card__body">
+        <span class="qs-feature-card__title">Q&amp;A Assistant</span>
+        <span class="qs-feature-card__desc">Ask about Qi Sun's background, research, and publications.</span>
+      </span>
+    </button>
+
+    <button class="qs-feature-card" type="button" data-qs-target="qs-panel-match">
+      <span class="qs-feature-card__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </span>
+      <span class="qs-feature-card__body">
+        <span class="qs-feature-card__title">Research Match</span>
+        <span class="qs-feature-card__desc">Describe your interest — get matched with relevant papers.</span>
+      </span>
+    </button>
+
+    <button class="qs-feature-card" type="button" data-qs-target="qs-panel-comments">
+      <span class="qs-feature-card__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      </span>
+      <span class="qs-feature-card__body">
+        <span class="qs-feature-card__title">Guestbook</span>
+        <span class="qs-feature-card__desc">Leave a comment or read what others wrote.</span>
+      </span>
+    </button>
+  </div>
+
+  <div class="qs-feature-panels">
+    <div class="qs-feature-panel is-active" id="qs-panel-chat">
+      <div class="qs-ask-hero">
+        <p class="qs-ask-hero__eyebrow">Personal Q&amp;A</p>
+        <p class="qs-ask-hero__lead">
+          Answers draw from a curated profile of education, work, research themes, and publications.
+          The assistant runs through a local DeepSeek-backed service while it is online.
+        </p>
+        <ul class="qs-ask-hints" id="qs-ask-hints">
+          <li><button type="button" data-qs-prompt="What is Qi Sun's current role?">Current role</button></li>
+          <li><button type="button" data-qs-prompt="What are Qi Sun's main research themes?">Research themes</button></li>
+          <li><button type="button" data-qs-prompt="Which papers are about time series anomaly detection?">Time series papers</button></li>
+          <li><button type="button" data-qs-prompt="How can I contact Qi Sun?">Contact</button></li>
+        </ul>
+      </div>
+      <div id="qs-agent-page" class="qs-agent qs-agent--page" aria-live="polite"></div>
+    </div>
+
+    <div class="qs-feature-panel" id="qs-panel-match" hidden>
+      <div class="qs-match" id="qs-match">
+        <div class="qs-match__inner">
+          <h3 class="qs-match__title">Find your match</h3>
+          <p class="qs-match__lead">Describe your research interest — I'll match you with Qi Sun's most relevant work.</p>
+          <form class="qs-match__form" id="qs-match-form">
+            <input class="qs-match__input" type="text" id="qs-match-input"
+              placeholder="e.g. anomaly detection in multivariate time series" maxlength="200" />
+            <button class="qs-match__btn" type="submit">Match</button>
+          </form>
+          <div class="qs-match__result" id="qs-match-result" hidden></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qs-feature-panel" id="qs-panel-comments" hidden>
+      <div class="qs-comments" data-page-id="/explore/" data-page-title="Explore"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(() => {
+  const grid = document.getElementById("qs-feature-grid");
+  if (!grid) return;
+  grid.addEventListener("click", (e) => {
+    const card = e.target.closest(".qs-feature-card");
+    if (!card) return;
+    const target = card.getAttribute("data-qs-target");
+    grid.querySelectorAll(".qs-feature-card").forEach((c) => c.classList.toggle("is-active", c === card));
+    document.querySelectorAll(".qs-feature-panel").forEach((p) => {
+      const show = p.id === target;
+      p.classList.toggle("is-active", show);
+      p.hidden = !show;
+    });
+  });
+})();
+</script>

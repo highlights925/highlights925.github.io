@@ -56,3 +56,7 @@ Published in *Reliability Engineering & System Safety* (2026).
 - DOI: [10.1016/j.ress.2025.111691](https://doi.org/10.1016/j.ress.2025.111691)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

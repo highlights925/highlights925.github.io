@@ -55,3 +55,7 @@ Effective across four scenarios; inference ≈ 1.08 ms with ~457 MB memory on CP
 - DOI: [10.1109/CAC63892.2024.10865523](https://doi.org/10.1109/CAC63892.2024.10865523)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

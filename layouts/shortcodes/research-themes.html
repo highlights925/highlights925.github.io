@@ -1,0 +1,16 @@
+{{/* Visual research-theme cards with images, replacing the text table */}}
+<div class="qs-themes">
+  {{ range $i, $t := .Site.Params.qs_research_themes }}
+  {{ $img := printf "media/research/%s" $t.image | relURL }}
+  <a class="qs-theme-card" href="{{ $t.link | relURL }}">
+    <div class="qs-theme-card__media">
+      <img src="{{ $img }}" alt="{{ $t.title }}" loading="lazy" decoding="async" />
+    </div>
+    <div class="qs-theme-card__body">
+      <h3 class="qs-theme-card__title">{{ $t.title }}</h3>
+      <p class="qs-theme-card__text">{{ $t.text }}</p>
+      <span class="qs-theme-card__tag">{{ $t.tag }}</span>
+    </div>
+  </a>
+  {{ end }}
+</div>

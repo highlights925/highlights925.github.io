@@ -55,3 +55,7 @@ Published in *IEEE Geoscience and Remote Sensing Letters* (2026).
 - DOI: [10.1109/LGRS.2026.3667024](https://doi.org/10.1109/LGRS.2026.3667024)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

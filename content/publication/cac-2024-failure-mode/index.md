@@ -56,3 +56,7 @@ Strong accuracy on Tennessee Eastman Process (TEP) and Catalytic Cracking Proces
 - DOI: [10.1109/CAC63892.2024.10864828](https://doi.org/10.1109/CAC63892.2024.10864828)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}

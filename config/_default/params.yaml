@@ -59,8 +59,43 @@ features:
   privacy_pack:
     enable: false
 
-# Local Q&A agent (see services/agent/README.md)
+# Research themes for homepage visual cards
+qs_research_themes:
+  - title: Knowledge Graph & LLM RCA
+    text: Safety knowledge graphs + LLMs for interpretable root-cause analysis under alarm floods.
+    tag: CCC 2024 · EAAI 2025
+    image: kg-llm.png
+    link: /project/safety-kg-llm/
+  - title: Time Series Anomaly Detection
+    text: Spatial-temporal and DS2AE-style models for multivariate process monitoring and diagnosis.
+    tag: ICIC 2024 · CCC 2025
+    image: mts-anomaly.png
+    link: /project/mts-anomaly/
+  - title: ADAS Safety Verification
+    text: Hybrid automata reachability and interpretable control for advanced driver assistance systems.
+    tag: RESS 2026 · IEEE SMC 2024
+    image: adas-verification.png
+    link: /project/adas-verification/
+
+# Backend features (see services/agent/README.md).
 # For live GitHub Pages, set api_base to a tunnel URL while your machine is online.
+# Each feature is a pluggable module in services/agent/modules/<name>.py.
+features:
+  api_base: "https://horizontal-chapters-printers-retreat.trycloudflare.com"
+  api_key: ""
+  chat:
+    enable: true
+    title: "Ask about Qi Sun"
+    placeholder: "Ask about research, education, papers…"
+    welcome: "Hi — I can answer questions about Qi Sun's background, research, and publications. Start the local agent service to chat."
+    floating: true
+    floating_on_ask: false
+  comments:
+    enable: true
+  match:
+    enable: true
+
+# Back-compat alias: older partials may still read `agent.*`
 agent:
   enable: true
   api_base: "https://horizontal-chapters-printers-retreat.trycloudflare.com"

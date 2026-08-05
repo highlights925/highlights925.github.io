@@ -4,7 +4,7 @@ date: 2022-10-24
 type: landing
 
 design:
-  spacing: "5rem"
+  spacing: "4rem"
 
 sections:
   - block: resume-biography-3
@@ -32,11 +32,9 @@ sections:
       text: |-
         I build methods that turn **process signals**, **alarms**, and **domain documents** into explainable decisions for plants and vehicles.
 
-        | Theme | What I work on | Representative work |
-        | --- | --- | --- |
-        | Knowledge-augmented RCA | Safety knowledge graphs + LLMs for root-cause analysis | [CCC 2024](/publication/ccc-2024/), [EAAI 2025](/publication/eai-2025-ner/) |
-        | Time series monitoring | Spatial-temporal / DS2AE anomaly detection & diagnosis | [ICIC 2024](/publication/icic-2024-mtsad/), [CCC 2025](/publication/ccc-2025-ds2ae/) |
-        | CPS & ADAS assurance | Hybrid automata, reachability, interpretable control | [RESS 2026](/publication/ress-2026-adas/), [IEEE SMC 2024](/publication/smc-2024-adas/) |
+        {{< research-themes >}}
+
+        {{< research-match >}}
     design:
       columns: '1'
   - block: collection

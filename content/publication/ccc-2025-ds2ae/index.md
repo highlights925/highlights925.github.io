@@ -56,3 +56,7 @@ F1 = 92.55% on a simulated catalytic cracking dataset; robust to hyperparameter 
 - DOI: [10.23919/CCC64809.2025.11178964](https://doi.org/10.23919/CCC64809.2025.11178964)
 - Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
 
+
+{{< paper-chat >}}
+
+{{< comments >}}
