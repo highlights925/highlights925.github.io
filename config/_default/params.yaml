@@ -58,3 +58,15 @@ features:
     enable: false
   privacy_pack:
     enable: false
+
+# Local Q&A agent (see services/agent/README.md)
+# For live GitHub Pages, set api_base to a tunnel URL while your machine is online.
+agent:
+  enable: true
+  api_base: "https://horizontal-chapters-printers-retreat.trycloudflare.com"
+  api_key: ""
+  title: "Ask about Qi Sun"
+  placeholder: "Ask about research, education, papers…"
+  welcome: "Hi — I can answer questions about Qi Sun's background, research, and publications. Start the local agent service to chat."
+  floating: true
+  floating_on_ask: false

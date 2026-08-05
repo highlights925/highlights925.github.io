@@ -1,0 +1,29 @@
+{{/* Inject homepage Q&A agent when enabled in params.agent */}}
+{{- $agent := site.Params.agent -}}
+{{- if $agent.enable -}}
+{{- $cfg := dict
+  "enable" true
+  "apiBase" ($agent.api_base | default "http://127.0.0.1:8000")
+  "apiKey" ($agent.api_key | default "")
+  "title" ($agent.title | default "Ask about Qi Sun")
+  "placeholder" ($agent.placeholder | default "Ask about research, education, papers…")
+  "welcome" ($agent.welcome | default "Hi — I can answer questions about Qi Sun's background, research, and publications. Start the local agent service to chat.")
+  "floating" (cond (isset $agent "floating") $agent.floating true)
+  "floatingOnAsk" ($agent.floating_on_ask | default false)
+-}}
+{{/* base64 in a data attribute survives HTML minify; JS string literals do not. */}}
+<div id="qs-agent-config" hidden data-cfg="{{ $cfg | jsonify | base64Encode }}"></div>
+<script>
+(function () {
+  var el = document.getElementById("qs-agent-config");
+  if (!el) return;
+  try {
+    window.QS_AGENT = JSON.parse(atob(el.getAttribute("data-cfg")));
+  } catch (err) {
+    console.error("QS_AGENT config failed", err);
+    window.QS_AGENT = { enable: true, apiBase: "http://127.0.0.1:8000" };
+  }
+})();
+</script>
+<script src="{{ "js/agent-chat.js" | relURL }}" defer></script>
+{{- end -}}

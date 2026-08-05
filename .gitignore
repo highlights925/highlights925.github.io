@@ -3,6 +3,13 @@
 /resources/
 .hugo_build.lock
 hugo_stats.json
+.tools/
+
+# Local agent
+services/agent/.venv/
+services/agent/.env
+**/__pycache__/
+*.pyc
 
 # OS / IDE
 .DS_Store

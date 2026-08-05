@@ -46,10 +46,18 @@ taxonomies:
   author: authors
   tag: tags
   publication_type: publication_types
+minify:
+  _merge: deep
+  minifyOutput: false
 markup:
   _merge: deep
   highlight:
     lineNos: false
+  goldmark:
+    renderHooks:
+      link:
+        # Theme modules may still set the removed enableDefault key; override for Hugo 0.148+.
+        useEmbedded: fallback
 security:
   _merge: deep
 sitemap:
