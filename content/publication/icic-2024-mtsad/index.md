@@ -12,7 +12,7 @@ publishDate: "2024-08-01T00:00:00Z"
 publication_types: ["chapter"]
 publication: In *International Conference on Intelligent Computing (ICIC)*
 publication_short: In *ICIC*
-abstract: "Multivariate time series anomaly detection is essential for ensuring the safety and reliability of industrial processes. This paper proposes a spatial-temporal dependency based approach for multivariate time series anomaly detection, designed to capture complex couplings among process variables and improve detection performance in industrial scenarios."
+abstract: "A multi-task variational autoencoder combines graph attention networks for cross-variable structure and selective state-space models for temporal patterns. Across three datasets, including catalytic-cracking process data, it outperforms six baselines and produces anomaly scores and a causal variable graph to support interpretation."
 summary: "First-author work on spatial-temporal multivariate time series anomaly detection for industrial processes."
 tags:
   - Anomaly Detection
@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1007/978-981-97-5618-6_18"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-A spatial-temporal dependency formulation captures both cross-variable relations and temporal dynamics for multivariate time series anomaly detection in industrial plants.
+Industrial sensors are noisy and interdependent: anomalies may appear as an unusual value, a broken relationship between variables, or a change in temporal behavior. This paper treats spatial and temporal dependency modeling as a joint anomaly-detection problem.
 
-**Role:** First author · **Theme:** Time Series Anomaly Detection · **Citations (OpenAlex):** 1
+## Method
 
-## Highlights
+The proposed multi-task variational autoencoder learns a representation of multivariate time series. Graph attention networks capture relationships across process variables, while selective state-space models capture temporal dynamics. The multi-task objective is intended to learn robust representations in the presence of noise; anomaly scores and a causal graph provide interpretable signals for diagnosis.
 
-- Model spatial-temporal dependencies among multivariate process variables.
-- Target industrial process monitoring where variable couplings are strong.
-- Improve anomaly detection over baselines that ignore structural dependencies.
+## Evaluation
 
-## Key Results
+The model is compared with six baselines on three datasets, including catalytic-cracking process data. Reported F1 scores across the three datasets are 0.9389, 0.8151, and 0.9524. The anomaly scores and variable graph are presented as aids for operators to inspect and respond to detected events. Qi Sun is first author.
 
-Validated on industrial process settings; published in ICIC 2024 (LNCS).
+## Paper
 
-## Links
-
-- DOI: [10.1007/978-981-97-5618-6_18](https://doi.org/10.1007/978-981-97-5618-6_18)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [Springer chapter](https://link.springer.com/chapter/10.1007/978-981-97-5618-6_18) · [DOI](https://doi.org/10.1007/978-981-97-5618-6_18)
 
 
 {{< paper-chat >}}

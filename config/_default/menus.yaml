@@ -16,6 +16,3 @@ main:
   - name: News
     url: post/
     weight: 50
-  - name: Explore
-    url: explore/
-    weight: 60

@@ -1,0 +1,26 @@
+{{- define "main" -}}
+{{- if .IsHome -}}
+  {{ partial "landing_page.html" . }}
+{{- else -}}
+  {{- $eyebrow := "Research portfolio" -}}
+  {{- $summary := .Params.summary | default .Summary | plainify -}}
+  {{- if eq .Title "Experience" -}}
+    {{- $eyebrow = "Career and education" -}}
+    {{- $summary = "A compact view of professional experience, education, technical skills, awards and languages." -}}
+  {{- else if eq .Title "Research" -}}
+    {{- $summary = "Three connected research programs spanning industrial monitoring, knowledge-grounded reasoning and safety assurance." -}}
+  {{- end -}}
+  <div class="qs-page-shell qs-landing-page">
+    {{ partial "qs-page-header" (dict
+      "title" .Title
+      "eyebrow" $eyebrow
+      "summary" $summary
+      "backHref" "/"
+      "backLabel" "Dashboard"
+    ) }}
+    <div class="qs-landing-blocks">
+      {{ partial "landing_page.html" . }}
+    </div>
+  </div>
+{{- end -}}
+{{- end -}}

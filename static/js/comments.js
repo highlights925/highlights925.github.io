@@ -15,13 +15,16 @@
 
     root.innerHTML = `
       <h3 class="qs-comments__title">Comments</h3>
-      <form class="qs-comments__form">
-        <input class="qs-comments__name" type="text" placeholder="Your name" maxlength="80" required />
-        <input class="qs-comments__email" type="email" placeholder="Email (optional, not shown)" />
-        <textarea class="qs-comments__text" placeholder="Leave a comment…" rows="3" maxlength="2000" required></textarea>
+      <div class="qs-comments__list" aria-live="polite"></div>
+      <form class="qs-comments__form" hidden>
+        <label class="sr-only" for="qs-comment-name">Your name</label>
+        <input id="qs-comment-name" class="qs-comments__name" type="text" placeholder="Your name" maxlength="80" required />
+        <label class="sr-only" for="qs-comment-email">Email (optional, not shown)</label>
+        <input id="qs-comment-email" class="qs-comments__email" type="email" placeholder="Email (optional, not shown)" />
+        <label class="sr-only" for="qs-comment-text">Leave a comment</label>
+        <textarea id="qs-comment-text" class="qs-comments__text" placeholder="Leave a comment…" rows="3" maxlength="2000" required></textarea>
         <button class="qs-comments__submit" type="submit">Post comment</button>
       </form>
-      <div class="qs-comments__list"></div>
     `;
 
     const listEl = root.querySelector(".qs-comments__list");
@@ -31,12 +34,17 @@
     async function load() {
       listEl.innerHTML = '<span class="qs-comments__loading">Loading…</span>';
       try {
-        const res = await fetch(`${apiBase}/api/comments?page_id=${encodeURIComponent(pageId)}`, { headers });
+        const res = await fetch(`${apiBase}/api/comments?page_id=${encodeURIComponent(pageId)}`, {
+          headers,
+          signal: AbortSignal.timeout(4500),
+        });
         if (!res.ok) throw new Error(res.status);
         const data = await res.json();
         render(data.comments || []);
+        form.hidden = false;
       } catch {
-        listEl.innerHTML = '<span class="qs-comments__error">Could not load comments (is the agent service running?).</span>';
+        form.hidden = true;
+        listEl.innerHTML = '<span class="qs-comments__error">Comments are temporarily unavailable.</span>';
       }
     }
 
@@ -80,12 +88,13 @@
         const res = await fetch(`${apiBase}/api/comments`, {
           method: "POST", headers,
           body: JSON.stringify({ page_id: pageId, page_title: pageTitle, name, text, email }),
+          signal: AbortSignal.timeout(8000),
         });
         if (!res.ok) throw new Error(res.status);
         form.reset();
         await load();
       } catch {
-        alert("Could not post comment. Make sure the agent service is running.");
+        listEl.innerHTML = '<span class="qs-comments__error">Your comment could not be posted. Please try again later.</span>';
       } finally {
         submit.disabled = false;
         submit.textContent = "Post comment";

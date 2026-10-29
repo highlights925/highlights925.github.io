@@ -1,0 +1,60 @@
+/* Shared page refinements: every archive, resume section and article detail. */
+.page-body:has(> .blox-resume-experience) .blox-resume-skills > .flex.flex-col.lg\:flex-row > .w-full.lg\:w-1\/2 { width: 100%; }
+.blox-resume-skills .skills-content { align-items: flex-start; gap: 17px; padding: 15px 0; }
+.blox-resume-skills .skills-icon { flex: 0 0 18px; color: var(--qs-accent); }
+.blox-resume-skills .skills-name { flex: 1; line-height: 1.4; }
+.blox-resume-skills .skills-description { margin-top: 4px; color: var(--qs-muted); font-size: 13px; line-height: 1.5; font-weight: 400; }
+
+/* Publication abstract and venue information read as one summary panel. */
+.page-body article > main > .max-w-prose.grid {
+  width: 100%; max-width: none; grid-template-columns: minmax(125px, .28fr) minmax(0, 1fr);
+  gap: 0 22px; margin: 28px 0 35px; padding: 22px 24px;
+  background: #f0f1e9; border: 1px solid var(--qs-line); border-radius: 7px;
+}
+.page-body article > main > .max-w-prose.grid > div:first-child {
+  grid-column: 1 / -1; margin-bottom: 12px; color: var(--qs-accent-deep);
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif; font-size: 11px;
+  letter-spacing: .12em; text-transform: uppercase;
+}
+.page-body article > main > .max-w-prose.grid > div:nth-child(2) {
+  grid-column: 1 / -1; margin-bottom: 20px; color: #43574d; font-size: 14px; line-height: 1.65;
+}
+.page-body article > main > .max-w-prose.grid > div:nth-child(3),
+.page-body article > main > .max-w-prose.grid > div:nth-child(5) {
+  align-self: center; padding-top: 12px; border-top: 1px solid #d2d9ce; color: #4f6056;
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif; font-size: 11px;
+  font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+}
+.page-body article > main > .max-w-prose.grid > div:nth-child(4),
+.page-body article > main > .max-w-prose.grid > div:nth-child(6) {
+  padding-top: 12px; border-top: 1px solid #d2d9ce; color: var(--qs-ink); font-size: 13px; line-height: 1.5;
+}
+.page-body article > main > .max-w-prose.grid a { color: var(--qs-accent-deep); }
+.page-body .mx-auto.flex.max-w-screen-xl { gap: 17px; }
+.page-body .mx-auto.flex.max-w-screen-xl > article > main { flex: 1 1 auto; min-width: 0; }
+.page-body .hb-toc { flex: 0 0 228px; }
+
+/* News archive cards put the date in a narrow rail and align actions. */
+.page-body:has(article.md\:grid) .flex.max-w-3xl.flex-col.space-y-16 { align-items: stretch; }
+.page-body article.md\:grid { position: relative; display: block; min-height: 270px; padding: 23px 22px 23px 74px; }
+.page-body article.md\:grid h2 { margin: 0 0 10px; }
+.page-body article.md\:grid p { margin-top: 0; color: #59685f; font-size: 14px; line-height: 1.6; }
+.page-body article.md\:grid > div { display: flex; flex-direction: column; min-height: 218px; margin-top: 0; padding: 0; }
+.page-body article.md\:grid > div > div[aria-hidden="true"] { margin-top: auto; padding-top: 18px; }
+.page-body article.md\:grid > time { position: absolute; top: 25px; left: 22px; width: 42px; color: var(--qs-accent-deep); font-size: 11px; line-height: 1.35; font-weight: 700; }
+.page-body article.md\:grid > div > time { display: none; }
+
+@media (max-width: 760px) {
+  .page-body .mx-auto.flex.max-w-screen-xl { display: flex; flex-direction: column; gap: 12px; }
+  .page-body .hb-toc { flex-basis: auto; }
+  .page-body article > main > .max-w-prose.grid { grid-template-columns: 1fr; padding: 18px; }
+  .page-body article > main > .max-w-prose.grid > div:nth-child(3),
+  .page-body article > main > .max-w-prose.grid > div:nth-child(5) { padding-bottom: 3px; }
+  .page-body article > main > .max-w-prose.grid > div:nth-child(4),
+  .page-body article > main > .max-w-prose.grid > div:nth-child(6) { padding-top: 0; border-top: 0; }
+}
+@media (max-width: 580px) {
+  .page-body article.md\:grid { min-height: 0; padding: 18px; }
+  .page-body article.md\:grid > time { position: static; display: block; width: auto; margin: 0 0 10px; }
+  .page-body article.md\:grid > div { min-height: 0; }
+}

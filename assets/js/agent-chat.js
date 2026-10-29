@@ -14,7 +14,7 @@
   const placeholder = cfg.placeholder || "Ask about research, education, papers…";
   const welcome =
     cfg.welcome ||
-    "Hi — I can answer questions about Qi Sun's background, research, and publications. The assistant only works while the local agent service is online.";
+    "Hi — ask me about Qi Sun's background, research, and publications.";
 
   const state = {
     messages: [],
@@ -122,7 +122,7 @@
       setStatus(statusEl, true, data.model || "ok");
       statusEl.title = data.model ? `model: ${data.model}` : "";
     } catch {
-      setStatus(statusEl, false, "Offline — start local agent");
+      setStatus(statusEl, false, "Temporarily unavailable");
     }
   }
 

@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1109/CAC63892.2024.10864571"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-HAZOP results and process knowledge are fused into a safety KG; enhanced RPN-style functions score deviation nodes quantitatively.
+HAZOP is widely used to identify process deviations, but its tabular findings are difficult to reuse directly for quantitative prioritization. This paper turns HAZOP findings and process context into connected knowledge, then evaluates deviation risks in a fluid catalytic cracking (FCC) unit.
 
-**Role:** Co-author · **Theme:** Process Safety · **Citations (OpenAlex):** 1
+## Method
 
-## Highlights
+The authors standardize a HAZOP analysis and combine its deviation nodes with process knowledge to form a safety knowledge graph. They extend risk-priority-number (RPN) evaluation rules and define risk-assessment functions for the deviation nodes, producing a ranked set of risks for targeted protection planning.
 
-- Combine HAZOP analysis with a safety knowledge graph for FCC units.
-- Quantitative risk assessment beyond qualitative HAZOP tables.
-- Improve risk priority ranking for targeted protection.
+## Evidence and contribution
 
-## Key Results
+The reported experiment finds the resulting risk ordering reliable and accurate. The available abstract does not provide a numerical validation metric. Qi Sun is fourth author.
 
-Risk rankings show high reliability for FCC unit protection planning.
+## Paper
 
-## Links
-
-- DOI: [10.1109/CAC63892.2024.10864571](https://doi.org/10.1109/CAC63892.2024.10864571)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Xplore record and abstract](https://doi.org/10.1109/CAC63892.2024.10864571) · [DOI](https://doi.org/10.1109/CAC63892.2024.10864571)
 
 
 {{< paper-chat >}}

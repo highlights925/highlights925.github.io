@@ -12,7 +12,7 @@ publishDate: "2026-02-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: In *Reliability Engineering & System Safety*
 publication_short: In *RESS*
-abstract: "Advanced driver assistance systems (ADAS) require rigorous safety and security verification due to complex mode switching and cyber-physical interactions. This paper presents an enhanced verification framework that strengthens assurance of ADAS safety and security properties beyond conventional testing-oriented evaluation."
+abstract: "This paper combines reachability-based formal verification with DRL-guided falsification for ADAS under cyberattacks. A hybrid automaton models vehicle and controller behavior, while attacks are bounded disturbances. When conservative verification is inconclusive, reachability results guide a DRL search for concrete unsafe attack paths, demonstrated with Flow* and CARLA/Scenic."
 summary: "A verification framework for ADAS safety and security, published in RESS 2026."
 tags:
   - ADAS
@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1016/j.ress.2025.111691"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-A verification framework for ADAS that jointly considers safety and security properties under discrete mode changes and continuous vehicle dynamics.
+Reachability-based formal verification can become inconclusive when cyberattacks are represented conservatively as bounded disturbances. Falsification can find concrete unsafe examples, but an unguided search may be expensive and does not itself prove safety. This paper makes verification and falsification guide one another.
 
-**Role:** Co-author · **Theme:** ADAS Safety Verification · **Citations (OpenAlex):** 4
+## Method
 
-## Highlights
+A hybrid automaton models vehicle dynamics and ADAS control modes; attack effects are over-approximated as bounded inputs during reachability analysis. When the reachable-set result is inconclusive, a deep-reinforcement-learning (DRL) falsifier searches for attack paths that violate the safety specification. Verification geometry and outcomes shape the DRL reward and help focus the search.
 
-- Enhanced verification covering both safety and security of ADAS.
-- Address mode switching and cyber-physical interactions beyond road tests alone.
-- Strengthen assurance arguments for complex driver-assistance stacks.
+## Evaluation and contribution
 
-## Key Results
+The framework is demonstrated with Flow* reachability and high-fidelity CARLA/Scenic simulations. It targets concrete counterexample discovery in cases where over-approximation blocks a decisive verification result. Qi Sun is second author; the article lists his contribution as data curation.
 
-Published in *Reliability Engineering & System Safety* (2026).
+## Paper
 
-## Links
-
-- DOI: [10.1016/j.ress.2025.111691](https://doi.org/10.1016/j.ress.2025.111691)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [Reliability Engineering & System Safety article](https://www.sciencedirect.com/science/article/pii/S0951832025008919) · [DOI](https://doi.org/10.1016/j.ress.2025.111691)
 
 
 {{< paper-chat >}}

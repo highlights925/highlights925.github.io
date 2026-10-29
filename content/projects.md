@@ -2,6 +2,7 @@
 title: 'Research'
 date: 2024-05-19
 type: landing
+summary: 'Three connected research programs spanning industrial monitoring, knowledge-grounded reasoning and safety assurance.'
 
 design:
   spacing: '5rem'
@@ -9,16 +10,13 @@ design:
 sections:
   - block: markdown
     content:
-      title: Research Themes
-      text: |-
-        My work sits at the intersection of **industrial AI** and **safety-critical systems**: turning noisy process signals and domain documents into actionable, explainable decisions.
-
-        Across catalytic cracking, manufacturing NLP, and ADAS verification, the goal is the same — methods that operators and engineers can **trust under uncertainty**.
+      text: '{{< scholar-dashboard >}}'
     design:
       columns: '1'
+      css_class: qs-research-section
   - block: collection
     content:
-      title: Selected Projects
+      title: ''
       text: ""
       filters:
         folders:

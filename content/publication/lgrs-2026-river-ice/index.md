@@ -24,7 +24,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1109/LGRS.2026.3667024"
 url_video: ""
 image:
   filename: featured.png
@@ -34,26 +34,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-A lightweight DeepLabv3+ enhancement combines regionally weighted / sparse-aware dilated convolution with a boundary-interactive ASPP module.
+River-ice imagery contains fragmented floes, varied textures, and indistinct ice–water edges. Standard atrous convolution in DeepLabv3+ samples features uniformly, which can cause gridding artifacts and weak boundary detail. This paper adapts the segmentation network to those image structures.
 
-**Role:** Co-author · **Theme:** Remote Sensing · **Citations (OpenAlex):** 0
+## Method
 
-## Highlights
+The model combines multiscale sparse-aware dilated convolution with a coordinated dilation configuration and a boundary-interactive ASPP refinement branch. The design aims to aggregate central-region features and preserve broader context while improving the representation of ice boundaries.
 
-- Enhance DeepLabv3+ for river ice segmentation in remote sensing imagery.
-- Multiscale sparse-aware dilated convolution reduces gridding artifacts.
-- Boundary-interactive ASPP improves ice–water boundary discrimination.
+## Evidence
 
-## Key Results
+On the NWPU_YRCC2 dataset, the paper reports a 1.95 percentage-point mIoU improvement over baseline DeepLabv3+, with no additional computational overhead. This is the reported dataset result; performance on other imagery remains a separate validation question. Qi Sun is fourth author.
 
-Published in *IEEE Geoscience and Remote Sensing Letters* (2026).
+## Paper
 
-## Links
-
-- DOI: [10.1109/LGRS.2026.3667024](https://doi.org/10.1109/LGRS.2026.3667024)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Geoscience and Remote Sensing Letters record](https://doi.org/10.1109/LGRS.2026.3667024) · [DOI](https://doi.org/10.1109/LGRS.2026.3667024)
 
 
 {{< paper-chat >}}

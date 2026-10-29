@@ -1,0 +1,108 @@
+{
+  "profileUrl": "https://scholar.google.com/citations?user=F_aQcNMAAAAJ&hl=zh-CN",
+  "updatedAt": "2026-10-15T16:22:00+00:00",
+  "stats": {
+    "citations": 40,
+    "hIndex": 3,
+    "i10index": 2
+  },
+  "papers": [
+    {
+      "title": "Capacity estimation of lithium-ion battery with multi-task autoencoder and empirical mode decomposition",
+      "citations": 13,
+      "year": 2024
+    },
+    {
+      "title": "Root cause analysis for industrial process anomalies through the integration of knowledge graph and large language model",
+      "citations": 11,
+      "year": 2024
+    },
+    {
+      "title": "Enhanced verification of safety and security for advanced driver assistance systems",
+      "citations": 7,
+      "year": 2025
+    },
+    {
+      "title": "Named entity recognition based on anchor span for manufacturing knowledge extraction",
+      "citations": 3,
+      "year": 2025
+    },
+    {
+      "title": "Spatial-temporal dependency based multivariate time series anomaly detection for industrial processes",
+      "citations": 3,
+      "year": 2024
+    },
+    {
+      "title": "Safety Risk Assessment in Fluid Catalytic Cracking Units Based on HAZOP and Knowledge Graph",
+      "citations": 1,
+      "year": 2024
+    },
+    {
+      "title": "Integrated Digital Model-Based Safety and Security Awareness and Analysis for Process Industry",
+      "citations": 1,
+      "year": 2024
+    },
+    {
+      "title": "Interpretable Vehicular Safety Control Based on Hybrid Automata and Deep Reinforcement Learning",
+      "citations": 1,
+      "year": 2024
+    },
+    {
+      "title": "OregairuChar: A Benchmark Dataset for Character Appearance Frequency Analysis in My Teen Romantic Comedy SNAFU",
+      "citations": 0,
+      "year": 2025
+    },
+    {
+      "title": "Anomaly Detection of the Reaction Regeneration Process in a Catalytic Cracking Unit Based on DS2AE",
+      "citations": 0,
+      "year": 2025
+    },
+    {
+      "title": "Safety Verification of Advanced Driver Assistance Systems Using Hybrid Automaton Reachability",
+      "citations": 0,
+      "year": 2024
+    },
+    {
+      "title": "Anomaly Diagnosis of Catalytic Cracking Process Based on Autoencoder and Causal Model",
+      "citations": 0,
+      "year": 2024
+    },
+    {
+      "title": "Spatial-Temporal Dependency Based Automatic Failure Mode Classification for Industrial Processes",
+      "citations": 0,
+      "year": 2024
+    }
+  ],
+  "yearly": [
+    {
+      "year": 2024,
+      "count": 9
+    },
+    {
+      "year": 2025,
+      "count": 4
+    }
+  ],
+  "topics": [
+    {
+      "name": "Industrial anomaly diagnosis",
+      "count": 4
+    },
+    {
+      "name": "Process safety & knowledge systems",
+      "count": 3
+    },
+    {
+      "name": "Time series & machine learning",
+      "count": 3
+    },
+    {
+      "name": "Autonomous driving verification",
+      "count": 2
+    },
+    {
+      "name": "Energy & battery systems",
+      "count": 1
+    }
+  ]
+}

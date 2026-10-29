@@ -24,7 +24,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1109/CAC63892.2024.10865599"
 url_video: ""
 image:
   filename: featured.png
@@ -34,26 +34,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-IDM construction and a multi-level awareness pipeline jointly consider temporal, spatial, and domain knowledge for safety–security analysis.
+Process facilities face both equipment failures and cyber threats, and these risks cross the boundary between digital systems and physical operations. This paper proposes an integrated digital model (IDM) to combine live process state with safety and security expertise for explainable situational analysis.
 
-**Role:** Co-author · **Theme:** Process Safety · **Citations (OpenAlex):** 0
+## Method
 
-## Highlights
+The IDM is built by fusing real-time system state with domain knowledge. Its analysis pipeline considers both spatial and temporal relationships, and supports three levels of awareness: individual points, propagation paths, and the overall system. This structure connects a local abnormal reading to its broader process context.
 
-- Construct an Integrated Digital Model (IDM) fusing real-time state with safety/security expertise.
-- Multi-level awareness at point, path, and system scales.
-- Explainable analysis under dual threats of attacks and faults.
+## Evaluation
 
-## Key Results
+The authors demonstrate abnormal-event analysis and response on a real fluid catalytic cracking system. This is a case-study validation of the modeling and awareness workflow; the abstract does not report a general benchmark score. Qi Sun is second author.
 
-Demonstrated on abnormal event analysis and disposal for a real fluid catalytic cracking system.
+## Paper
 
-## Links
-
-- DOI: [10.1109/CAC63892.2024.10865599](https://doi.org/10.1109/CAC63892.2024.10865599)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Xplore record](https://ieeexplore.ieee.org/document/10865599) · [DOI](https://doi.org/10.1109/CAC63892.2024.10865599)
 
 
 {{< paper-chat >}}

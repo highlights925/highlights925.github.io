@@ -1,0 +1,202 @@
+{{- $projects := where .Site.RegularPages "Type" "project" -}}
+{{- $publications := where .Site.RegularPages "Type" "publication" -}}
+{{- $news := where .Site.RegularPages "Type" "post" -}}
+{{- $scholar := site.Data.scholar -}}
+{{- $avatar := "" -}}
+{{- with site.GetPage "authors/admin" -}}
+  {{- with .Resources.GetMatch "avatar.*" -}}
+    {{- $avatar = . -}}
+  {{- end -}}
+{{- end -}}
+<article class="qs-console" id="overview" aria-labelledby="qs-console-title">
+  <header class="qs-console__header">
+    <div class="qs-console__identity">
+      {{- if $avatar -}}
+        {{- $avatar1x := $avatar.Resize "64x64 webp q86" -}}
+        {{- $avatar2x := $avatar.Resize "128x128 webp q86" -}}
+        <img class="qs-console__avatar" src="{{ $avatar2x.RelPermalink }}" srcset="{{ $avatar1x.RelPermalink }} 1x, {{ $avatar2x.RelPermalink }} 2x" alt="Portrait of Qi Sun" width="64" height="64" decoding="async" fetchpriority="high">
+      {{- else -}}
+        <img class="qs-console__avatar" src="{{ "author/qi-sun/avatar.jpg" | relURL }}" alt="Portrait of Qi Sun" width="64" height="64" decoding="async">
+      {{- end -}}
+      <div class="qs-console__intro">
+        <p class="qs-console__kicker"><span class="qs-console__status-dot" aria-hidden="true"></span> Research dashboard</p>
+        <h1 id="qs-console-title">Qi Sun <span>孙琪</span></h1>
+        <p class="qs-console__role">AI Engineer · Huawei Wuhan Research Institute</p>
+      </div>
+    </div>
+    <nav class="qs-console__actions" aria-label="Portfolio actions">
+      <a class="qs-console__button qs-console__button--primary" href="{{ "projects/" | relURL }}">Explore research <span aria-hidden="true">↗</span></a>
+      <a class="qs-console__button qs-console__button--secondary" href="{{ "uploads/resume.pdf" | relURL }}" download>Download CV <span aria-hidden="true">↓</span></a>
+    </nav>
+  </header>
+
+  <section class="qs-console__metrics" aria-label="Research at a glance">
+    <div class="qs-console__metric">
+      <span>Papers in portfolio</span>
+      <strong>{{ len $publications }}</strong>
+      <small>Peer-reviewed and preprints</small>
+    </div>
+    {{- with $scholar -}}
+      <div class="qs-console__metric">
+        <span>Scholar citations</span>
+        <strong>{{ index .stats "citations" }}</strong>
+        <small>Indexed across all papers</small>
+      </div>
+      <div class="qs-console__metric">
+        <span>h-index</span>
+        <strong>{{ index .stats "hIndex" }}</strong>
+        <small>Google Scholar metric</small>
+      </div>
+    {{- end -}}
+    <div class="qs-console__metric">
+      <span>Research programs</span>
+      <strong>{{ len $projects }}</strong>
+      <small>Connected workstreams</small>
+    </div>
+    {{- with $scholar -}}
+      <a class="qs-console__sync" href="{{ .profileUrl }}" target="_blank" rel="noopener noreferrer">
+        <span>Scholar sync</span>
+        <strong>{{ (time .updatedAt).Format "Jan 2, 2006" }}</strong>
+        <small>View source profile ↗</small>
+      </a>
+    {{- end -}}
+  </section>
+
+  <div class="qs-console__main">
+    <section class="qs-console__signal" aria-labelledby="qs-console-signal-title">
+      <div class="qs-console__section-head">
+        <div>
+          <p class="qs-console__eyebrow">01 / Research system</p>
+          <h2 id="qs-console-signal-title">From signals to safer decisions.</h2>
+        </div>
+        <a class="qs-console__text-link" href="{{ "projects/" | relURL }}">Open research map <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="qs-console__lead">My work connects noisy industrial data, operational knowledge and formal reasoning so that anomalies can be detected, explained and acted on with confidence.</p>
+
+      <div class="qs-console__trace" aria-hidden="true">
+        <div class="qs-console__trace-meta"><span>Telemetry</span><span>Alarm correlation</span><span>Safe response</span></div>
+        <svg viewBox="0 0 760 150" preserveAspectRatio="none" focusable="false">
+          <line class="qs-console__gridline" x1="0" y1="32" x2="760" y2="32"/>
+          <line class="qs-console__gridline" x1="0" y1="75" x2="760" y2="75"/>
+          <line class="qs-console__gridline" x1="0" y1="118" x2="760" y2="118"/>
+          <path class="qs-console__trace-base" d="M0 92H62L78 83H104L119 99H146L163 40L180 119L199 51L219 88H260L279 73H302L320 103H354L372 58L390 86H433L451 78H478L497 114L515 36L535 92H572L591 69H619L638 98H682L699 47L718 78H760"/>
+          <path class="qs-console__trace-signal" d="M0 92H62L78 83H104L119 99H146L163 40L180 119L199 51L219 88H260L279 73H302L320 103H354L372 58L390 86H433L451 78H478L497 114L515 36L535 92H572L591 69H619L638 98H682L699 47L718 78H760"/>
+          <circle class="qs-console__trace-marker" cx="163" cy="40" r="5"/>
+          <circle class="qs-console__trace-marker" cx="515" cy="36" r="5"/>
+          <circle class="qs-console__trace-marker" cx="699" cy="47" r="5"/>
+        </svg>
+        <div class="qs-console__trace-events"><span>Anomaly signal</span><span>Candidate cause</span><span>Verified action</span></div>
+      </div>
+
+      <div class="qs-console__stages">
+        <a class="qs-console__stage" href="{{ "project/mts-anomaly/" | relURL }}">
+          <span class="qs-console__stage-index">01 / Observe</span>
+          <strong>Time-series intelligence</strong>
+          <small>Detect coupled process anomalies and classify failure modes.</small>
+          <span class="qs-console__stage-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="qs-console__stage" href="{{ "project/safety-kg-llm/" | relURL }}">
+          <span class="qs-console__stage-index">02 / Explain</span>
+          <strong>Knowledge graphs &amp; LLMs</strong>
+          <small>Trace alarms to evidence and interpretable root causes.</small>
+          <span class="qs-console__stage-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="qs-console__stage" href="{{ "project/adas-verification/" | relURL }}">
+          <span class="qs-console__stage-index">03 / Assure</span>
+          <strong>Safety verification</strong>
+          <small>Connect learning-based control with formal safety guarantees.</small>
+          <span class="qs-console__stage-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <aside class="qs-console__context" aria-labelledby="qs-console-context-title">
+      <div>
+        <div class="qs-console__context-status"><span aria-hidden="true"></span> Current position</div>
+        <h2 id="qs-console-context-title">Industrial AI for safer operations.</h2>
+        <p>Working between research and engineering to turn anomaly detection, domain knowledge and verification methods into dependable AI systems.</p>
+      </div>
+      <dl class="qs-console__facts">
+        <div><dt>Based in</dt><dd>Wuhan, China</dd></div>
+        <div><dt>Education</dt><dd>MEng, Cyberspace Security<br>HUST</dd></div>
+        <div><dt>Working across</dt><dd>Detection · RCA · verification</dd></div>
+      </dl>
+      <nav class="qs-console__contacts" aria-label="Contact and profiles">
+        <a href="mailto:highlights925@gmail.com">Email <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/highlights925" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="https://scholar.google.com/citations?user=F_aQcNMAAAAJ" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a>
+        <a href="https://orcid.org/0009-0006-4692-6265" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
+      </nav>
+    </aside>
+  </div>
+
+  <div class="qs-console__lower">
+    <section class="qs-console__papers" id="papers" aria-labelledby="qs-console-papers-title">
+      <div class="qs-console__section-head">
+        <div>
+          <p class="qs-console__eyebrow">02 / Publication index</p>
+          <h2 id="qs-console-papers-title">Recent papers.</h2>
+        </div>
+        <a class="qs-console__text-link" href="{{ "publication/" | relURL }}">View all <span aria-hidden="true">↗</span></a>
+      </div>
+      <ol class="qs-console__paper-list">
+        {{- range first 5 (sort $publications "Date" "desc") }}
+        <li>
+          <a class="qs-console__paper" href="{{ .RelPermalink }}">
+            <span class="qs-console__paper-year">{{ .Date.Format "2006" }}</span>
+            <span class="qs-console__paper-copy">
+              <strong>{{ .Title }}</strong>
+              <small>{{ with .Params.publication_short }}{{ . | markdownify | plainify }}{{ else }}Publication{{ end }}</small>
+            </span>
+            <span class="qs-console__paper-arrow" aria-hidden="true">↗</span>
+          </a>
+        </li>
+        {{- end -}}
+      </ol>
+    </section>
+
+    <aside class="qs-console__rail" aria-label="Activity and related-work search">
+      <section class="qs-console__activity" aria-labelledby="qs-console-activity-title">
+        <div class="qs-console__section-head">
+          <div>
+            <p class="qs-console__eyebrow">03 / Activity</p>
+            <h2 id="qs-console-activity-title">Latest notes.</h2>
+          </div>
+          <a class="qs-console__text-link" href="{{ "post/" | relURL }}">All news <span aria-hidden="true">↗</span></a>
+        </div>
+        <ol class="qs-console__activity-list">
+          {{- range first 3 (sort $news "Date" "desc") }}
+          <li>
+            <a href="{{ .RelPermalink }}">
+              <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+              <strong>{{ .Title }}</strong>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </li>
+          {{- end -}}
+        </ol>
+      </section>
+
+      <section class="qs-console__match" aria-labelledby="qs-console-match-title">
+        <p class="qs-console__eyebrow">Explore a connection</p>
+        <h2 id="qs-console-match-title">Find related work.</h2>
+        <p>Describe your research interest to query this portfolio.</p>
+        <div class="qs-match" id="qs-match">
+          <form class="qs-match__form" id="qs-match-form">
+            <label for="qs-match-input">Research interest</label>
+            <div class="qs-match__fields">
+              <input class="qs-match__input" type="text" id="qs-match-input" placeholder="e.g. industrial anomaly detection" maxlength="200">
+              <button class="qs-match__btn" type="submit">Match <span aria-hidden="true">↗</span></button>
+            </div>
+          </form>
+          <div class="qs-match__result" id="qs-match-result" aria-live="polite" hidden></div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="qs-console__footer">
+    <span>Research and engineering portfolio · {{ now.Format "2006" }}</span>
+    <a href="mailto:highlights925@gmail.com">Have a question? Get in touch <span aria-hidden="true">↗</span></a>
+  </footer>
+</article>

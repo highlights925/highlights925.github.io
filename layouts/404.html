@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="qs-page-shell qs-error-page">
+  {{ partial "qs-page-header" (dict
+    "title" "Page not found."
+    "eyebrow" "404 / Navigation error"
+    "summary" "This route does not exist or has moved. Return to the research dashboard, or continue with one of the indexed sections below."
+    "backHref" "/"
+    "backLabel" "Dashboard"
+  ) }}
+  <section class="qs-index-panel" aria-labelledby="qs-error-links">
+    <div class="qs-index-panel__head">
+      <div>
+        <p class="qs-page-index-label">Continue</p>
+        <h2 id="qs-error-links">Useful destinations</h2>
+      </div>
+      <p>Site map</p>
+    </div>
+    <div class="qs-index-list">
+      <a class="qs-index-row" href="{{ "/" | relURL }}">
+        <span class="qs-index-row__number" aria-hidden="true">01</span>
+        <span class="qs-index-row__copy"><strong>Research dashboard</strong><small>Overview, metrics and current focus.</small></span>
+        <span class="qs-index-row__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="qs-index-row" href="{{ "/projects/" | relURL }}">
+        <span class="qs-index-row__number" aria-hidden="true">02</span>
+        <span class="qs-index-row__copy"><strong>Research programs</strong><small>Projects across monitoring, explanation and assurance.</small></span>
+        <span class="qs-index-row__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="qs-index-row" href="{{ "/publication/" | relURL }}">
+        <span class="qs-index-row__number" aria-hidden="true">03</span>
+        <span class="qs-index-row__copy"><strong>Publications</strong><small>Papers, preprints and citation records.</small></span>
+        <span class="qs-index-row__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="qs-index-row" href="{{ "/post/" | relURL }}">
+        <span class="qs-index-row__number" aria-hidden="true">04</span>
+        <span class="qs-index-row__copy"><strong>News and notes</strong><small>Research milestones and recent activity.</small></span>
+        <span class="qs-index-row__arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+</div>
+{{ end }}

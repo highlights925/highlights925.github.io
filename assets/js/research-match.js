@@ -20,7 +20,6 @@
     if (!interest) return;
 
     busy = true;
-    input.value = "";
     btn.disabled = true;
     input.disabled = true;
     result.hidden = false;
@@ -39,8 +38,9 @@
       card.className = "qs-match__card";
       card.innerHTML = window.qsRenderMd ? window.qsRenderMd(data.reply) : data.reply;
       result.append(card);
+      input.value = "";
     } catch (err) {
-      result.innerHTML = '<span class="qs-match__error">Could not reach the agent. Make sure the local service is running.</span>';
+      result.innerHTML = '<span class="qs-match__error">Research matching is temporarily unavailable. Please try again later.</span>';
     } finally {
       busy = false;
       btn.disabled = false;

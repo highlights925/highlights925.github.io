@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.23919/CCC63176.2024.10662704"
 url_video: ""
 image:
   filename: featured.jpg
@@ -35,26 +35,22 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-The pipeline couples structured safety knowledge with large language models. Alarm entities act as retrieval keys; the LLM then reasons over graph facts rather than raw alarms alone, improving comprehensibility under alarm floods.
+Industrial alarm floods can obscure the initiating event: many alarms arrive together, while their relationships depend on the process structure and operating history. This paper asks whether a language model can explain a likely root cause when it is given relevant, traceable process knowledge rather than alarm text alone.
 
-**Role:** First author · **Theme:** Knowledge Graphs & LLMs · **Citations (OpenAlex):** 7
+## Method
 
-## Highlights
+The workflow builds a process-safety knowledge graph from catalytic-cracking operation manuals and historical anomaly information. Named entities extracted from alarm messages become retrieval keys; the retrieved graph facts are then supplied to a large language model as contextual evidence for root-cause inference. The graph supplies domain facts, while the language model turns those facts and alarm observations into an explanation.
 
-- Build an industrial process safety knowledge graph from catalytic cracking manuals and historical anomalies.
-- Use NER over alarm text to retrieve factual context from the knowledge graph.
-- Feed retrieved facts to an LLM as prior knowledge for interpretable root-cause analysis.
+## Evidence and contribution
 
-## Key Results
+The conference paper reports experiments in which the method identifies root causes accurately. The published abstract does not give a numeric accuracy or a comparison table, so this page does not attach a score to that claim. Qi Sun is the first author.
 
-Experiments show the approach can accurately identify root causes in industrial anomaly scenarios, supporting safer process operations.
+## Paper
 
-## Links
-
-- DOI: [10.23919/CCC63176.2024.10662704](https://doi.org/10.23919/CCC63176.2024.10662704)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Xplore record and abstract](https://ieeexplore.ieee.org/abstract/document/10662704) · [DOI](https://doi.org/10.23919/CCC63176.2024.10662704)
+- The conference PDF is available with this page.
 
 
 {{< paper-chat >}}

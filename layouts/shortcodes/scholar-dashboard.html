@@ -1,0 +1,76 @@
+{{- $data := site.Data.scholar -}}
+{{- if $data -}}
+<section class="qs-research-overview" aria-labelledby="qs-research-overview-title">
+  <header class="qs-research-overview__head">
+    <div>
+      <p class="qs-page-index-label">Research telemetry</p>
+      <h2 id="qs-research-overview-title">A connected safety research program.</h2>
+      <p>Data-driven monitoring finds the anomaly, knowledge systems explain the cause, and formal methods check whether the resulting response is safe. This overview is sourced from the public Scholar index and the projects in this portfolio.</p>
+    </div>
+    <div class="qs-research-overview__metrics" aria-label="Google Scholar metrics">
+      <div class="qs-research-overview__metric">
+        <strong>{{ index $data.stats "citations" }}</strong>
+        <span>Citations</span>
+      </div>
+      <div class="qs-research-overview__metric">
+        <strong>{{ index $data.stats "hIndex" }}</strong>
+        <span>h-index</span>
+      </div>
+      <div class="qs-research-overview__metric">
+        <strong>{{ index $data.stats "i10index" }}</strong>
+        <span>i10-index</span>
+      </div>
+      <div class="qs-research-overview__metric">
+        <strong>{{ len $data.papers }}</strong>
+        <span>Scholar papers</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="qs-research-overview__body">
+    <section class="qs-research-overview__panel" aria-labelledby="qs-topic-title">
+      <div class="qs-research-overview__panelhead">
+        <div>
+          <p class="qs-page-index-label">01 / Thematic map</p>
+          <h3 id="qs-topic-title">Questions I return to</h3>
+        </div>
+        <span>Title signals</span>
+      </div>
+      {{- $maxTopic := 1 -}}
+      {{- range $data.topics -}}{{- if gt .count $maxTopic -}}{{- $maxTopic = .count -}}{{- end -}}{{- end -}}
+      <div class="qs-topic-list">
+        {{- range first 5 $data.topics -}}
+          <div class="qs-topic-row">
+            <span>{{ .name }}</span>
+            <div aria-hidden="true"><i style="--topic-width: {{ div (mul .count 100) $maxTopic }}%"></i></div>
+            <b>{{ .count }}</b>
+          </div>
+        {{- end -}}
+      </div>
+      <p class="qs-research-overview__caption">Signals inferred from publication titles; one paper can connect to several areas.</p>
+    </section>
+
+    <section class="qs-research-overview__panel" aria-labelledby="qs-output-title">
+      <div class="qs-research-overview__panelhead">
+        <div>
+          <p class="qs-page-index-label">02 / Output</p>
+          <h3 id="qs-output-title">Publication rhythm</h3>
+        </div>
+        <span>By year</span>
+      </div>
+      {{- $maxYear := 1 -}}
+      {{- range $data.yearly -}}{{- if gt .count $maxYear -}}{{- $maxYear = .count -}}{{- end -}}{{- end -}}
+      <div class="qs-year-chart" role="img" aria-label="Publications by year">
+        {{- range $data.yearly -}}
+          <div class="qs-year-chart__bar">
+            <strong>{{ .count }}</strong>
+            <i style="--bar-height: {{ div (mul .count 96) $maxYear }}px"></i>
+            <span>{{ .year }}</span>
+          </div>
+        {{- end -}}
+      </div>
+      <p class="qs-research-overview__caption">Scholar profile updated {{ (time $data.updatedAt).Format "Jan 2, 2006" }} · <a href="{{ $data.profileUrl }}" target="_blank" rel="noopener noreferrer">Open the source profile ↗</a></p>
+    </section>
+  </div>
+</section>
+{{- end -}}

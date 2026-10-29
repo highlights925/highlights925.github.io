@@ -33,27 +33,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-Manually curated frames from *My Teen Romantic Comedy SNAFU* S3 with dense character boxes; evaluate detection baselines and aggregate predictions over time.
+Character screen time is a measurable signal of narrative prominence, but anime footage presents detection challenges such as occlusion, changing poses, and visually similar characters. OregairuChar provides a manually annotated benchmark for studying appearance frequency in *My Teen Romantic Comedy SNAFU*.
 
-**Role:** First author · **Theme:** Computer Vision Benchmark · **Citations (OpenAlex):** 0
+## Dataset and method
 
-## Highlights
+The release contains 1,600 manually selected frames from season 3, with 2,860 bounding boxes covering 11 main characters. The authors benchmark multiple object detectors, then aggregate their predictions by episode to examine how character presence changes over the series. The annotations support both detector evaluation and downstream character-frequency analysis.
 
-- Release OregairuChar: 1600 frames, 2860 boxes, 11 main characters.
-- Benchmark detectors under occlusion, pose variation, and inter-character similarity.
-- Enable episode-level character appearance frequency analysis for narrative studies.
+## Evidence and contribution
 
-## Key Results
+The paper positions the dataset as a starting point for computational narrative analysis in stylized media. The reported analysis is based on model predictions over episodes; it is not a claim that screen time alone captures a character’s narrative importance. Qi Sun is the first author.
 
-Provides a stylized-media benchmark and a pipeline for computational narrative analysis via appearance frequency.
+## Paper and data
 
-## Links
-
-- DOI: [10.48550/arXiv.2511.05263](https://doi.org/10.48550/arXiv.2511.05263)
-- Preprint: [https://arxiv.org/abs/2511.05263](https://arxiv.org/abs/2511.05263)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [arXiv preprint and abstract](https://arxiv.org/abs/2511.05263) · [PDF](https://arxiv.org/pdf/2511.05263) · [DOI](https://doi.org/10.48550/arXiv.2511.05263)
 
 
 {{< paper-chat >}}

@@ -2,6 +2,7 @@
 title: 'Experience'
 date: 2023-10-24
 type: landing
+summary: 'Professional experience, education, technical skills, awards and languages in one compact career dashboard.'
 
 design:
   spacing: '5rem'

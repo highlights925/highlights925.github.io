@@ -72,10 +72,7 @@ work:
     date_start: 2025-08-04
     date_end: ''
     summary: |2-
-      Working on AI engineering and productization, with a focus on:
-      - Applying large models and generative AI to industrial and engineering scenarios.
-      - Building and evaluating deep learning systems for perception, decision-making, and intelligent analysis.
-      - Developing toolchains, integrating AI capabilities into products, and improving reliability and performance.
+      Applying generative AI to engineering workflows and building reliable perception and decision systems, product toolchains, and production improvements.
   - position: Graduate Researcher
     company_name: Huazhong University of Science and Technology
     company_url: 'https://www.hust.edu.cn/'
@@ -83,11 +80,7 @@ work:
     date_start: 2022-09-01
     date_end: 2025-06-20
     summary: |2-
-      Conducted research on industrial process safety and intelligent analysis under Prof. Chunjie Zhou's group:
-      - Safety knowledge graph construction and LLM-based root-cause analysis for catalytic cracking processes.
-      - Multivariate time series anomaly detection with spatial-temporal dependency modeling.
-      - Manufacturing named entity recognition and ADAS / CPS safety verification.
-      - Published in *Measurement*, *EAAI*, *RESS*, *CCC*, *CAC*, *IEEE SMC*, and *ICIC*.
+      Researched process safety, knowledge graphs and LLM-based root-cause analysis, time-series anomaly detection, manufacturing NLP, and ADAS / CPS verification with Prof. Chunjie Zhou. Published in *Measurement*, *EAAI*, *RESS*, *CCC*, *CAC*, *IEEE SMC*, and *ICIC*.
 
 # Skills
 skills:

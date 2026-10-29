@@ -1,0 +1,81 @@
+{{ define "main" }}
+{{- $type := .Type -}}
+{{- $eyebrow := "Portfolio index" -}}
+{{- if eq $type "publication" -}}
+  {{- $eyebrow = "Research output" -}}
+{{- else if eq $type "post" -}}
+  {{- $eyebrow = "News and milestones" -}}
+{{- else if eq $type "project" -}}
+  {{- $eyebrow = "Research programs" -}}
+{{- end -}}
+{{- $summary := .Params.summary | default .Summary | plainify -}}
+{{- $paginator := .Paginate .Pages.ByDate.Reverse -}}
+<div class="qs-page-shell qs-index-page">
+  {{ partial "qs-page-header" (dict
+    "title" .Title
+    "eyebrow" $eyebrow
+    "summary" $summary
+    "backHref" "/"
+    "backLabel" "Dashboard"
+    "count" $paginator.TotalNumberOfElements
+    "countLabel" "records"
+  ) }}
+
+  {{- with .Content -}}
+    <div class="qs-page-content-intro prose">{{ . }}</div>
+  {{- end -}}
+
+  <section class="qs-index-panel" aria-label="{{ .Title }} collection">
+    <div class="qs-index-panel__head">
+      <div>
+        <p class="qs-page-index-label">{{ $eyebrow }}</p>
+        <h2>Browse the index</h2>
+      </div>
+      <p>Newest first</p>
+    </div>
+    {{- if $paginator.Pages -}}
+      <div class="qs-index-list">
+        {{- range $index, $item := $paginator.Pages -}}
+          {{- $summaryText := $item.Params.summary | default $item.Params.description | default $item.Summary | plainify -}}
+          {{- $thumb := "" -}}
+          {{- with partial "functions/get_featured_image.html" $item -}}
+            {{- $thumb = .Fill "240x160 Center" -}}
+            {{- if ne $thumb.MediaType.SubType "gif" -}}{{- $thumb = $thumb.Process "webp" -}}{{- end -}}
+          {{- end -}}
+          {{- $meta := "" -}}
+          {{- if eq $item.Type "publication" -}}
+            {{- $meta = $item.Params.publication_short | default $item.Params.publication | default "Publication" | markdownify | plainify -}}
+          {{- else if eq $item.Type "project" -}}
+            {{- with $item.Params.tags -}}{{- $meta = index . 0 -}}{{- end -}}
+          {{- else -}}
+            {{- with $item.Params.tags -}}{{- $meta = delimit . " · " -}}{{- end -}}
+          {{- end -}}
+          <a class="qs-index-row{{ with $thumb }} qs-index-row--with-media{{ end }}" href="{{ $item.RelPermalink }}">
+            <span class="qs-index-row__number" aria-hidden="true">{{ printf "%02d" (add $index 1) }}</span>
+            <span class="qs-index-row__copy">
+              <span class="qs-index-row__meta">
+                <time datetime="{{ $item.Date.Format "2006-01-02" }}">{{ $item.Date.Format "Jan 2, 2006" }}</time>
+                {{- with $meta -}}<span>{{ . }}</span>{{- end -}}
+              </span>
+              <strong>{{ $item.Title }}</strong>
+              {{- with $summaryText -}}<small>{{ . | truncate 190 }}</small>{{- end -}}
+            </span>
+            {{- with $thumb -}}
+              <span class="qs-index-row__media" aria-hidden="true"><img src="{{ .RelPermalink }}" alt="" width="{{ .Width }}" height="{{ .Height }}" loading="lazy" decoding="async"></span>
+            {{- end -}}
+            <span class="qs-index-row__arrow" aria-hidden="true">↗</span>
+          </a>
+        {{- end -}}
+      </div>
+    {{- else -}}
+      <div class="qs-empty-state">
+        <strong>No entries yet.</strong>
+        <p>There is no content in this collection.</p>
+        <a href="{{ "/" | relURL }}">Return to the dashboard</a>
+      </div>
+    {{- end -}}
+  </section>
+
+  {{ partial "components/paginator.html" . }}
+</div>
+{{ end }}

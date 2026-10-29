@@ -24,7 +24,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1109/CAC63892.2024.10865523"
 url_video: ""
 image:
   filename: featured.png
@@ -34,26 +34,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-Hybrid automata describe ADAS modes; DRL optimizes ACC strategies while preserving interpretability of mode-level behavior.
+ADAS functions switch between discrete operating modes while vehicle motion evolves continuously. A controller that behaves well within one mode can still create abrupt or unsafe behavior during transitions. This paper studies interpretable safety control for adaptive cruise control (ACC) using a hybrid-system representation.
 
-**Role:** Co-author · **Theme:** ADAS Safety Control · **Citations (OpenAlex):** 1
+## Method
 
-## Highlights
+Hybrid automata describe the ADAS functions and their mode transitions. Deep reinforcement learning (DRL) optimizes ACC control strategies inside that representation, making the operating mode and maneuver part of the control explanation.
 
-- Interpretable ADAS control via hybrid automata + deep reinforcement learning.
-- Focus on adaptive cruise control across acceleration, braking, and cut-in scenarios.
-- Low-latency CPU inference with modest memory.
+## Evaluation
 
-## Key Results
+Numerical experiments cover acceleration, deceleration, emergency braking, and vehicle cut-in. The paper reports CPU inference of 1.08 ms and 456.89 MB memory use. These figures describe the authors’ reported setup and should not be read as hardware-independent guarantees. Qi Sun is second author.
 
-Effective across four scenarios; inference ≈ 1.08 ms with ~457 MB memory on CPU.
+## Paper
 
-## Links
-
-- DOI: [10.1109/CAC63892.2024.10865523](https://doi.org/10.1109/CAC63892.2024.10865523)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Xplore record](https://ieeexplore.ieee.org/document/10865523) · [DOI](https://doi.org/10.1109/CAC63892.2024.10865523)
 
 
 {{< paper-chat >}}

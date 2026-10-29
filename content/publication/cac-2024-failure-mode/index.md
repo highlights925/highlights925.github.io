@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1109/CAC63892.2024.10864828"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-Graph attention and diagonal state-space models extract low-dimensional spatial-temporal representations for failure-mode classification.
+Chemical-process cyber-physical systems depend on several protection layers, including basic process control, alarms, and safety instrumented systems. The paper classifies system and failure states from process measurements, with the stated motivation of detecting failures that can threaten those layers.
 
-**Role:** Co-author · **Theme:** Cyber-Physical Security · **Citations (OpenAlex):** 0
+## Method
 
-## Highlights
+The proposed classifier represents dependencies between process variables using graph attention networks, then models temporal patterns with diagonal state-space models. The resulting spatial-temporal representation is used to classify multivariate process states and support failure localization.
 
-- Classify industrial failure modes from multivariate time series under cyber threats.
-- Use graph attention networks and diagonal state space models for spatial-temporal features.
-- Support localization of protection-layer failures (BPCS / alarm / SIS).
+## Evaluation
 
-## Key Results
+Experiments use both the Tennessee Eastman Process (TEP) benchmark and a catalytic-cracking process (CCP) dataset. The paper reports high classification accuracy and reliability, but the public abstract does not provide numerical results; this page therefore avoids inventing a percentage. Qi Sun is second author.
 
-Strong accuracy on Tennessee Eastman Process (TEP) and Catalytic Cracking Process (CCP) datasets.
+## Paper
 
-## Links
-
-- DOI: [10.1109/CAC63892.2024.10864828](https://doi.org/10.1109/CAC63892.2024.10864828)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Xplore record](https://ieeexplore.ieee.org/document/10864828) · [DOI](https://doi.org/10.1109/CAC63892.2024.10864828)
 
 
 {{< paper-chat >}}

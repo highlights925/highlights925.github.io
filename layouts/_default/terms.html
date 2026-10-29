@@ -1,0 +1,38 @@
+{{ define "main" }}
+{{- $type := .Type -}}
+<div class="qs-page-shell qs-terms-page">
+  {{ partial "qs-page-header" (dict
+    "title" .Title
+    "eyebrow" "Portfolio taxonomy"
+    "summary" "Browse the site by topic, publication type, or person."
+    "backHref" "/"
+    "backLabel" "Dashboard"
+    "count" (len .Data.Terms)
+    "countLabel" "topics"
+  ) }}
+  <section class="qs-index-panel" aria-labelledby="qs-terms-title">
+    <div class="qs-index-panel__head">
+      <div>
+        <p class="qs-page-index-label">Index</p>
+        <h2 id="qs-terms-title">All topics</h2>
+      </div>
+      <p>Alphabetical</p>
+    </div>
+    <div class="qs-term-grid">
+      {{- range $key, $value := .Data.Terms.Alphabetical -}}
+        {{- $name := .Name -}}
+        {{- $count := .Count -}}
+        {{- with site.GetPage (printf "/%s/%s" $type $name) -}}
+          <a class="qs-term" href="{{ .RelPermalink }}">
+            <span>{{ .LinkTitle }}</span>
+            <strong>{{ $count }}</strong>
+          </a>
+        {{- end -}}
+      {{- end -}}
+    </div>
+  </section>
+  {{- with .Content -}}
+    <div class="qs-page-content-intro prose">{{ . }}</div>
+  {{- end -}}
+</div>
+{{ end }}

@@ -1,0 +1,32 @@
+{{- define "main" -}}
+{{- $eyebrow := "Research portfolio" -}}
+{{- $summary := .Params.summary | default .Summary | plainify -}}
+{{- $count := 0 -}}
+{{- $countLabel := "" -}}
+{{- if eq .Title "Experience" -}}
+  {{- $eyebrow = "Career and education" -}}
+  {{- $summary = "A compact view of professional experience, education, technical skills, awards and languages." -}}
+  {{- with site.GetPage "authors/admin" -}}
+    {{- $count = len .Params.work -}}
+    {{- $countLabel = "roles" -}}
+  {{- end -}}
+{{- else if eq .Title "Research" -}}
+  {{- $summary = "Three connected research programs spanning industrial monitoring, knowledge-grounded reasoning and safety assurance." -}}
+  {{- $count = len (where site.RegularPages "Type" "project") -}}
+  {{- $countLabel = "programs" -}}
+{{- end -}}
+<div class="qs-page-shell qs-landing-page">
+  {{ partial "qs-page-header" (dict
+    "title" .Title
+    "eyebrow" $eyebrow
+    "summary" $summary
+    "backHref" "/"
+    "backLabel" "Dashboard"
+    "count" $count
+    "countLabel" $countLabel
+  ) }}
+  <div class="qs-landing-blocks">
+    {{ partial "landing_page.html" . }}
+  </div>
+</div>
+{{- end -}}

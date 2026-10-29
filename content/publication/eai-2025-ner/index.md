@@ -12,7 +12,7 @@ publishDate: "2025-12-01T00:00:00Z"
 publication_types: ["article-journal"]
 publication: In *Engineering Applications of Artificial Intelligence*
 publication_short: In *EAAI*
-abstract: "Manufacturing knowledge extraction relies on accurate named entity recognition to structure domain text into usable knowledge. This work proposes an anchor-span based NER approach tailored to manufacturing corpora, improving entity boundary detection and extraction quality for downstream knowledge applications."
+abstract: "Manufacturing text often contains nested entities packed into short, information-dense passages. The anchor-span NER (ASNER) model combines token and span classification: a boundary-matching network proposes candidate spans, then biaffine attention and convolutional context features classify them. The authors evaluate it on public NER datasets and a Chinese catalytic-cracking manual corpus."
 summary: "An anchor-span NER method for extracting manufacturing knowledge from domain text, published in EAAI 2025."
 tags:
   - Named Entity Recognition
@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1016/j.engappai.2025.112693"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-An anchor-span NER model tailored to manufacturing corpora, focusing on accurate span detection for domain entities used in knowledge extraction.
+Manufacturing manuals often pack domain-specific facts into short sentences and contain nested entities: one phrase may itself include another meaningful entity. Flat sequence tagging can miss these nested spans or choose incorrect boundaries, which then damages downstream knowledge extraction.
 
-**Role:** Co-author · **Theme:** Manufacturing NLP · **Citations (OpenAlex):** 2
+## Method
 
-## Highlights
+The anchor-span NER (ASNER) model combines token and span classification. A boundary-match network uses entity head and tail features to propose candidate anchor spans; biaffine attention and convolutional layers encode token context, after which the filtered candidates are classified. The authors also construct a Chinese nested NER dataset from catalytic-cracking operation manuals.
 
-- Anchor-span formulation for named entity recognition in manufacturing text.
-- Improve entity boundary detection for knowledge extraction pipelines.
-- Support downstream manufacturing knowledge graph construction.
+## Evaluation and contribution
 
-## Key Results
+The published article evaluates ASNER on six public flat and nested NER datasets plus a real refining-manual corpus. The abstract and article record report effectiveness but do not expose a single headline score in the accessible summary. Qi Sun is second author; the article’s contribution statement lists his work as validation and data curation.
 
-Published in *Engineering Applications of Artificial Intelligence* (2025).
+## Paper
 
-## Links
-
-- DOI: [10.1016/j.engappai.2025.112693](https://doi.org/10.1016/j.engappai.2025.112693)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [Engineering Applications of Artificial Intelligence article](https://www.sciencedirect.com/science/article/pii/S0952197625027241) · [DOI](https://doi.org/10.1016/j.engappai.2025.112693)
 
 
 {{< paper-chat >}}

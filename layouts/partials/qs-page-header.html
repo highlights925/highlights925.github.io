@@ -1,0 +1,34 @@
+{{- $title := .title -}}
+{{- $eyebrow := .eyebrow | default "Portfolio" -}}
+{{- $summary := .summary | default "" -}}
+{{- $backHref := .backHref | default "/" -}}
+{{- $backLabel := .backLabel | default "Dashboard" -}}
+{{- $count := .count -}}
+{{- $countLabel := .countLabel | default "records" -}}
+{{- $meta := .meta | default "" -}}
+<header class="qs-page-hero">
+  <nav class="qs-page-hero__crumbs" aria-label="Breadcrumb">
+    <a href="{{ $backHref | relURL }}">← {{ $backLabel }}</a>
+    <span aria-hidden="true">/</span>
+    <span>{{ $eyebrow }}</span>
+  </nav>
+  <div class="qs-page-hero__grid">
+    <div class="qs-page-hero__copy">
+      <p class="qs-page-hero__eyebrow">{{ $eyebrow }}</p>
+      <h1>{{ $title }}</h1>
+      {{- with $summary -}}
+        <div class="qs-page-hero__summary">{{ . | markdownify }}</div>
+      {{- end -}}
+      {{- with $meta -}}
+        <p class="qs-page-hero__meta">{{ . }}</p>
+      {{- end -}}
+    </div>
+    {{- if $count -}}
+      <div class="qs-page-hero__count" aria-label="{{ $count }} {{ $countLabel }}">
+        <span>Index</span>
+        <strong>{{ $count }}</strong>
+        <small>{{ $countLabel }}</small>
+      </div>
+    {{- end -}}
+  </div>
+</header>

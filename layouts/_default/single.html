@@ -1,0 +1,97 @@
+{{ define "main" }}
+{{- $isPublication := eq .Type "publication" -}}
+{{- $isProject := eq .Type "project" -}}
+{{- $isPost := eq .Type "post" -}}
+{{- $eyebrow := "Field note" -}}
+{{- $backHref := "/post/" -}}
+{{- $backLabel := "All news" -}}
+{{- if $isPublication -}}
+  {{- $eyebrow = "Publication record" -}}
+  {{- $backHref = "/publication/" -}}
+  {{- $backLabel = "All publications" -}}
+{{- else if $isProject -}}
+  {{- $eyebrow = "Research program" -}}
+  {{- $backHref = "/projects/" -}}
+  {{- $backLabel = "Research overview" -}}
+{{- end -}}
+{{- $summary := .Params.summary | default .Params.abstract | default .Summary | plainify -}}
+{{- $meta := .Date.Format "Jan 2, 2006" -}}
+{{- $featured := partial "functions/get_featured_image.html" . -}}
+<div class="qs-page-shell qs-detail-page">
+  {{ partial "qs-page-header" (dict
+    "title" .Title
+    "eyebrow" $eyebrow
+    "summary" $summary
+    "backHref" $backHref
+    "backLabel" $backLabel
+    "meta" $meta
+    "count" .ReadingTime
+    "countLabel" "min read"
+  ) }}
+
+  <div class="qs-detail-layout">
+    <article class="qs-detail-article">
+      <div class="qs-detail-toolbar">
+        <div class="qs-detail-tags">
+          {{- range first 3 .Params.tags -}}
+            <span>{{ . }}</span>
+          {{- end -}}
+        </div>
+        {{ partial "page_links_div.html" . }}
+      </div>
+
+      {{- if and $featured (not .Params.image.preview_only) -}}
+        {{- $heroImage := $featured.Fit "1200x760" -}}
+        {{- if ne $heroImage.MediaType.SubType "gif" -}}{{- $heroImage = $heroImage.Process "webp" -}}{{- end -}}
+        <figure class="qs-detail-media">
+          <img src="{{ $heroImage.RelPermalink }}" width="{{ $heroImage.Width }}" height="{{ $heroImage.Height }}" alt="{{ .Params.image.alt_text | default .Title }}" decoding="async">
+        </figure>
+      {{- end -}}
+
+      {{- if $isPublication -}}
+        {{- with .Params.abstract -}}
+          <section class="qs-abstract" aria-labelledby="qs-abstract-title">
+            <div>
+              <p class="qs-page-index-label">Abstract</p>
+              <h2 id="qs-abstract-title">Research summary</h2>
+            </div>
+            <p>{{ . | markdownify }}</p>
+            {{- with $.Params.publication -}}
+              <div class="qs-abstract__venue"><span>Published in</span><strong>{{ . | markdownify }}</strong></div>
+            {{- end -}}
+          </section>
+        {{- end -}}
+      {{- end -}}
+
+      <div class="prose qs-detail-prose">
+        {{ .Content }}
+      </div>
+
+      {{ partial "components/last-edited.html" . }}
+      <div class="qs-detail-supplement">
+        {{ partial "page_footer" . }}
+      </div>
+    </article>
+
+    <aside class="qs-detail-sidebar" aria-label="Page navigation">
+      {{- with .Fragments.Headings -}}
+        <details class="qs-outline" open>
+          <summary>On this page</summary>
+          <ol>
+            {{- range . -}}
+              {{- range .Headings -}}
+                <li><a href="#{{ .ID }}">{{ .Title }}</a></li>
+              {{- end -}}
+            {{- end -}}
+          </ol>
+        </details>
+      {{- end -}}
+      <div class="qs-detail-sidebar__links">
+        <p class="qs-page-index-label">Explore further</p>
+        <a href="{{ $backHref | relURL }}">{{ $backLabel }} <span aria-hidden="true">↗</span></a>
+        <a href="{{ "/" | relURL }}">Research dashboard <span aria-hidden="true">↗</span></a>
+      </div>
+    </aside>
+  </div>
+</div>
+{{ end }}

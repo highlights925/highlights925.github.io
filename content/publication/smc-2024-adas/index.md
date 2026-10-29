@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1109/SMC54092.2024.10830931"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-Hybrid automata model the closed-loop vehicle–ADAS system; reachability analysis verifies longitudinal cruising and collision-avoidance constraints.
+Road testing cannot cover every ADAS mode transition, and testing alone does not establish a formal safety guarantee. This paper develops a reachability-based verification pipeline for longitudinal vehicle behavior under cruising and collision-avoidance functions.
 
-**Role:** Co-author · **Theme:** ADAS Safety Verification · **Citations (OpenAlex):** 0
+## Method
 
-## Highlights
+The authors specify safety constraints and boundaries, validate a longitudinal vehicle model against CarSim, and represent the closed-loop vehicle-plus-ADAS system as a hybrid automaton. They compute reachable sets from the model and compare those sets with the specified unsafe boundaries; safety follows when the reachable behavior stays outside those regions.
 
-- Formal safety verification for longitudinal ADAS via hybrid automaton reachability.
-- Validate dynamics against high-fidelity CarSim simulation.
-- Compare reachable sets against specified safety boundaries.
+## Evidence and contribution
 
-## Key Results
+Numerical experiments demonstrate the verification pipeline for the modeled ADAS applications. Qi Sun is second author. The work is related to the later safety-security paper on this site, which adds bounded cyberattack modeling and guided falsification when reachability verification is inconclusive.
 
-Numerical experiments demonstrate effective verification of related ADAS applications.
+## Paper
 
-## Links
-
-- DOI: [10.1109/SMC54092.2024.10830931](https://doi.org/10.1109/SMC54092.2024.10830931)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE SMC proceedings record](https://doi.org/10.1109/SMC54092.2024.10830931) · [DOI](https://doi.org/10.1109/SMC54092.2024.10830931)
 
 
 {{< paper-chat >}}

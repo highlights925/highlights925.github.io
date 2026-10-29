@@ -25,7 +25,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.23919/CCC64809.2025.11178964"
 url_video: ""
 image:
   filename: featured.png
@@ -35,26 +35,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-DS2AE integrates diagonal state-space structures with MLPs and residual connections to extract temporal and spatial dependencies in multivariate process series.
+The reaction-regeneration stage of catalytic cracking has strongly coupled variables, so anomaly detection must account for both cross-variable relationships and changing patterns over time. This paper proposes DS2AE for multivariate process monitoring.
 
-**Role:** Co-author · **Theme:** Time Series Anomaly Detection · **Citations (OpenAlex):** 0
+## Method
 
-## Highlights
+DS2AE combines diagonal state-space structures with multilayer perceptrons and residual connections to represent spatial and temporal dependencies. Its architecture supports parallel inference across time steps. A ternary-search procedure selects the anomaly threshold automatically, reducing reliance on manual threshold tuning.
 
-- Propose DS2AE (diagonal state space autoencoder) for catalytic cracking monitoring.
-- Capture spatiotemporal dependencies with parallel inference across time steps.
-- Automatic threshold selection via ternary search.
+## Evidence
 
-## Key Results
+On a dataset generated from a catalytic-cracking process simulation, the model achieves an F1 score of 92.55% for binary anomaly classification. The authors also report robustness to hyperparameter selection. The experiment is simulation-based, so the result is evidence for the benchmark setting rather than a field-wide performance guarantee. Qi Sun is second author.
 
-F1 = 92.55% on a simulated catalytic cracking dataset; robust to hyperparameter choices.
+## Paper
 
-## Links
-
-- DOI: [10.23919/CCC64809.2025.11178964](https://doi.org/10.23919/CCC64809.2025.11178964)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [IEEE Xplore record](https://ieeexplore.ieee.org/document/11178964) · [DOI](https://doi.org/10.23919/CCC64809.2025.11178964)
 
 
 {{< paper-chat >}}

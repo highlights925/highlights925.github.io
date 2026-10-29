@@ -1,7 +1,11 @@
 ---
 title: Explore
-summary: Interactive features powered by a local AI agent — ask questions, match research, leave comments.
+summary: Ask questions, find related research, and leave a note.
 date: 2026-08-05
+draft: true
+build:
+  list: never
+  render: never
 ---
 
 {{< feature-cards >}}

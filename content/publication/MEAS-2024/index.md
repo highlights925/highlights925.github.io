@@ -23,7 +23,7 @@ url_dataset: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://doi.org/10.1016/j.measurement.2024.115146"
 url_video: ""
 image:
   filename: featured.jpg
@@ -33,26 +33,21 @@ projects: []
 slides: ""
 ---
 
-## Overview
+## Study focus
 
-EMD decomposes capacity series into IMFs and a residual. A multi-task diagonal-state-space autoencoder estimates IMFs; SVR models the residual.
+Battery capacity does not always decline smoothly. Capacity regeneration introduces local rises and irregular fluctuations that can confuse a forecaster trained on the raw series. The paper separates those fluctuations from the long-term trend before estimating capacity.
 
-**Role:** First author · **Theme:** Battery Health Estimation · **Citations (OpenAlex):** 10
+## Method
 
-## Highlights
+Empirical mode decomposition (EMD) splits each capacity series into intrinsic mode functions (IMFs) and a residual. A multi-task autoencoder built on diagonal state-space models predicts the IMFs, with an additional reconstruction task to improve the learned representation; support vector regression predicts the residual. Combining both predictions gives the final capacity estimate.
 
-- Handle capacity regeneration via empirical mode decomposition (EMD).
-- Estimate IMFs with a multi-task autoencoder based on diagonal state space models.
-- Achieve low RMSE and millisecond-level CPU inference with small memory footprint.
+## Evidence
 
-## Key Results
+Tests on the NASA, CALCE, and Toyota datasets report lower error than seven baselines. The average RMSE values are 0.0103, 0.0111, and 0.0004 for the three datasets. CPU inference takes 3.57 ms and uses 0.69 MB of memory in the reported setup.
 
-Outperforms seven baselines on three datasets (avg. RMSE 0.0103 / 0.0111 / 0.0004); inference in 3.57 ms with 0.69 MB on CPU.
+## Paper
 
-## Links
-
-- DOI: [10.1016/j.measurement.2024.115146](https://doi.org/10.1016/j.measurement.2024.115146)
-- Google Scholar profile: [Qi Sun](https://scholar.google.com/citations?user=F_aQcNMAAAAJ)
+- [Measurement article](https://www.sciencedirect.com/science/article/abs/pii/S0263224124010315) · [DOI](https://doi.org/10.1016/j.measurement.2024.115146)
 
 
 {{< paper-chat >}}
