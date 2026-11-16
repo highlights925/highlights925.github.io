@@ -1,8 +1,8 @@
 {
   "profileUrl": "https://scholar.google.com/citations?user=F_aQcNMAAAAJ&hl=zh-CN",
-  "updatedAt": "2026-10-15T16:22:00+00:00",
+  "updatedAt": "2026-11-16T11:46:16+00:00",
   "stats": {
-    "citations": 40,
+    "citations": 43,
     "hIndex": 3,
     "i10index": 2
   },
@@ -14,12 +14,12 @@
     },
     {
       "title": "Root cause analysis for industrial process anomalies through the integration of knowledge graph and large language model",
-      "citations": 11,
+      "citations": 13,
       "year": 2024
     },
     {
       "title": "Enhanced verification of safety and security for advanced driver assistance systems",
-      "citations": 7,
+      "citations": 8,
       "year": 2025
     },
     {
